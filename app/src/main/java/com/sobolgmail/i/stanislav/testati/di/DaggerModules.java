@@ -1,7 +1,9 @@
 package com.sobolgmail.i.stanislav.testati.di;
 
-import com.sobolgmail.i.stanislav.testati.interactor.cargos.CargoInteractor;
-import com.sobolgmail.i.stanislav.testati.interactor.cargos.ICargoInteractor;
+import com.sobolgmail.i.stanislav.testati.dataprovider.IDataProvider;
+import com.sobolgmail.i.stanislav.testati.dataprovider.retrofit.NetworkDataProvider;
+import com.sobolgmail.i.stanislav.testati.interactor.IInteractor;
+import com.sobolgmail.i.stanislav.testati.interactor.Interactor;
 
 import javax.inject.Singleton;
 
@@ -17,7 +19,13 @@ import dagger.Provides;
 public class DaggerModules {
     @Provides
     @Singleton
-    ICargoInteractor providesCargoInteractor() {
-        return new CargoInteractor();
+    IInteractor providesCargoInteractor() {
+        return new Interactor();
+    }
+
+    @Provides
+    @Singleton
+    IDataProvider providesDataProvider() {
+        return new NetworkDataProvider();
     }
 }

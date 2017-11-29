@@ -9,19 +9,22 @@ import com.google.gson.annotations.SerializedName;
 
 public class CurrencyTypeEntity {
     @SerializedName("Name")
-    String name;
+    private String name;
+
     @SerializedName("NameEng")
-    String nameEng;
+    private String nameEng;
+
     @SerializedName("Modifier")
-    String modifier;
+    private String modifier;
+
     @SerializedName("CurrencyIdPerKm")
-    String сurrencyIdPerKm;
+    private Integer сurrencyIdPerKm;
+
     @SerializedName("Id")
-    String id;
+    private Integer id;
+
     @SerializedName("Id2")
-    String id2;
-
-
+    private String id2;
 
 //    "Name": "kzt/т.",
 //            "NameEng": "kzt/ton",

@@ -2,7 +2,7 @@ package com.sobolgmail.i.stanislav.testati.cargos;
 
 import com.sobolgmail.i.stanislav.testati.MApplication;
 import com.sobolgmail.i.stanislav.testati.entity.CurrencyTypeEntity;
-import com.sobolgmail.i.stanislav.testati.interactor.cargos.ICargoInteractor;
+import com.sobolgmail.i.stanislav.testati.interactor.IInteractor;
 import com.sobolgmail.i.stanislav.testati.mpv.BasePresenter;
 import com.sobolgmail.i.stanislav.testati.utils.Logger;
 
@@ -22,10 +22,13 @@ import rx.schedulers.Schedulers;
 public class CargosPresenter extends BasePresenter<CargosContract.IView> implements CargosContract.IPresenter {
 
     @Inject
-    ICargoInteractor interactor;
+    IInteractor interactor;
 
     public CargosPresenter() {
         MApplication.getDaggerComponents().inject(this);
+
+
+
 
         compositeSubscription.add(interactor.getCurrencyTypesObservable()
                 .onBackpressureBuffer()
@@ -45,10 +48,12 @@ public class CargosPresenter extends BasePresenter<CargosContract.IView> impleme
                     @Override
                     public void onNext(List<CurrencyTypeEntity> entities) {
                         Logger.write(null);
-
                     }
                 })
         );
+
+
+
 
     }
 }

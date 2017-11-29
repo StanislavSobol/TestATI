@@ -15,13 +15,8 @@ public class Logger {
 
     private static final String COMMON_TAG = "MyLog";
     private static final String ERROR = "MyError";
-    private static final String PUSH_TAG = "MyPush";
-    private static final String SERVICE_TAG = "MyService";
-    private static final String VK_TAG = "MyVK";
-    private static final String VK_FIREBASE = "MyFirebase";
-    /**
-     * Should be disabled when unit-testing
-     */
+    private static final String HTTP_TAG = "MyHTTP";
+
     private static boolean DISABLED = false;
 
     public static void write(String msg) {
@@ -30,21 +25,9 @@ public class Logger {
         }
     }
 
-    public static void writePush(String msg) {
+    public static void writeHttp(String msg) {
         if (!DISABLED && msg != null && !msg.isEmpty()) {
-            Log.d(PUSH_TAG, msg);
-        }
-    }
-
-    public static void writeService(String msg) {
-        if (!DISABLED && msg != null && !msg.isEmpty()) {
-            Log.d(SERVICE_TAG, msg);
-        }
-    }
-
-    public static void writeVK(String msg) {
-        if (!DISABLED && msg != null && !msg.isEmpty()) {
-            Log.d(VK_TAG, msg);
+            Log.d(HTTP_TAG, msg);
         }
     }
 
@@ -63,12 +46,6 @@ public class Logger {
         if (!DISABLED && !TextUtils.isEmpty(msg)) {
             Log.d(ERROR, msg);
             Log.e(ERROR, msg);
-        }
-    }
-
-    static void writeFirebaseAnalytics(String event) {
-        if (!DISABLED && !TextUtils.isEmpty(event)) {
-            Log.d(VK_FIREBASE, event);
         }
     }
 }

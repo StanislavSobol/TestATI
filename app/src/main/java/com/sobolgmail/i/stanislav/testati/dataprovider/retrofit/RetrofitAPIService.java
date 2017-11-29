@@ -1,4 +1,4 @@
-package com.sobolgmail.i.stanislav.testati.retrofit;
+package com.sobolgmail.i.stanislav.testati.dataprovider.retrofit;
 
 import com.sobolgmail.i.stanislav.testati.entity.CurrencyTypeEntity;
 
@@ -12,7 +12,7 @@ import rx.Observable;
  * stanislav.i.sobol@gmail.com
  */
 
-public interface BaseAPIService {
+public interface RetrofitAPIService {
     @GET("dictionaries/currencyTypes")
     Observable<List<CurrencyTypeEntity>> getCurrencyTypesObservable();
 }

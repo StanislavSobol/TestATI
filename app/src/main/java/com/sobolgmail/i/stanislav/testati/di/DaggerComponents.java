@@ -1,8 +1,7 @@
 package com.sobolgmail.i.stanislav.testati.di;
 
-import com.sobolgmail.i.stanislav.testati.MApplication;
 import com.sobolgmail.i.stanislav.testati.cargos.CargosPresenter;
-import com.sobolgmail.i.stanislav.testati.interactor.cargos.CargoInteractor;
+import com.sobolgmail.i.stanislav.testati.interactor.Interactor;
 
 import javax.inject.Singleton;
 
@@ -17,9 +16,7 @@ import dagger.Component;
 @Component(modules = {DaggerModules.class})
 public interface DaggerComponents {
 
-    void inject(MApplication place);
-
     void inject(CargosPresenter place);
 
-    void inject(CargoInteractor place);
+    void inject(Interactor place);
 }
