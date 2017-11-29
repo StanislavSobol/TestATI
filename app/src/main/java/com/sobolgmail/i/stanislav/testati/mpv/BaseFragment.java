@@ -1,4 +1,4 @@
-package com.sobolgmail.i.stanislav.testati.viper;
+package com.sobolgmail.i.stanislav.testati.mpv;
 
 import android.app.Fragment;
 import android.os.Bundle;

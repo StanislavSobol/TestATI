@@ -1,4 +1,4 @@
-package com.sobolgmail.i.stanislav.testati.viper;
+package com.sobolgmail.i.stanislav.testati.mpv;
 
 import java.util.HashMap;
 import java.util.Map;

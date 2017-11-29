@@ -1,4 +1,4 @@
-package com.sobolgmail.i.stanislav.testati.mainview;
+package com.sobolgmail.i.stanislav.testati.cargos;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

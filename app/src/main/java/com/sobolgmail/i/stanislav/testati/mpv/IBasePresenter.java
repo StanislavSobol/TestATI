@@ -1,4 +1,4 @@
-package com.sobolgmail.i.stanislav.testati.viper;
+package com.sobolgmail.i.stanislav.testati.mpv;
 
 /**
  * Created by Stanislav Sobol on 29.11.2017.

@@ -12,6 +12,10 @@ public class MApplication extends Application {
 
     private DaggerComponents dagger2Components;
 
+    public static DaggerComponents getDaggerComponents() {
+        return instance.dagger2Components;
+    }
+
     @Override
     public void onCreate() {
         super.onCreate();

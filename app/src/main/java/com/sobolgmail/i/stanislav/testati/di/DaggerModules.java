@@ -1,6 +1,12 @@
 package com.sobolgmail.i.stanislav.testati.di;
 
+import com.sobolgmail.i.stanislav.testati.interactor.cargos.CargoInteractor;
+import com.sobolgmail.i.stanislav.testati.interactor.cargos.ICargoInteractor;
+
+import javax.inject.Singleton;
+
 import dagger.Module;
+import dagger.Provides;
 
 /**
  * Created by Stanislav Sobol on 29.11.2017.
@@ -9,12 +15,9 @@ import dagger.Module;
 
 @Module
 public class DaggerModules {
-
-//    @Provides
-//    @Singleton
-//    IDialogsInterator providesDialogsInterator() {
-//        return new DialogsInterator();
-//    }
-
-
+    @Provides
+    @Singleton
+    ICargoInteractor providesCargoInteractor() {
+        return new CargoInteractor();
+    }
 }

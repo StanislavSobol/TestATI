@@ -1,4 +1,4 @@
-package com.sobolgmail.i.stanislav.testati.mainview;
+package com.sobolgmail.i.stanislav.testati.cargos;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.sobolgmail.i.stanislav.testati.R;
-import com.sobolgmail.i.stanislav.testati.viper.BaseFragment;
+import com.sobolgmail.i.stanislav.testati.mpv.BaseFragment;
 
 /**
  * Created by Stanislav Sobol on 29.11.2017.

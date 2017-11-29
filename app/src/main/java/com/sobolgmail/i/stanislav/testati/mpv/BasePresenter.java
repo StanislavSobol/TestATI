@@ -1,4 +1,4 @@
-package com.sobolgmail.i.stanislav.testati.viper;
+package com.sobolgmail.i.stanislav.testati.mpv;
 
 import com.sobolgmail.i.stanislav.testati.utils.Logger;
 
