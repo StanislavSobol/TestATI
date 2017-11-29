@@ -43,6 +43,7 @@ dependencies {
     compile 'io.reactivex:rxjava:1.2.3'
 
     // Code builder
+    provided 'org.projectlombok:lombok:1.12.2'
     annotationProcessor 'org.projectlombok:lombok:1.12.2'
 
     // ORMLite
