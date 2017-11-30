@@ -1,7 +1,7 @@
 package com.sobolgmail.i.stanislav.testati.cargos;
 
 import com.sobolgmail.i.stanislav.testati.MApplication;
-import com.sobolgmail.i.stanislav.testati.entity.CurrencyTypeEntity;
+import com.sobolgmail.i.stanislav.testati.entity.CargoEntity;
 import com.sobolgmail.i.stanislav.testati.interactor.IInteractor;
 import com.sobolgmail.i.stanislav.testati.mpv.BasePresenter;
 import com.sobolgmail.i.stanislav.testati.utils.Logger;
@@ -28,13 +28,33 @@ public class CargosPresenter extends BasePresenter<CargosContract.IView> impleme
         MApplication.getDaggerComponents().inject(this);
 
 
+//        compositeSubscription.add(interactor.getCurrencyTypesObservable()
+//                .onBackpressureBuffer()
+//                .subscribeOn(Schedulers.computation())
+//                .observeOn(AndroidSchedulers.mainThread())
+//                .subscribe(new Subscriber<List<CurrencyTypeEntity>>() {
+//                    @Override
+//                    public void onCompleted() {
+//
+//                    }
+//
+//                    @Override
+//                    public void onError(Throwable e) {
+//                        Logger.write(e.getMessage());
+//                    }
+//
+//                    @Override
+//                    public void onNext(List<CurrencyTypeEntity> entities) {
+//                        Logger.write(null);
+//                    }
+//                })
+//        );
 
-
-        compositeSubscription.add(interactor.getCurrencyTypesObservable()
+        compositeSubscription.add(interactor.getCargosObservable()
                 .onBackpressureBuffer()
                 .subscribeOn(Schedulers.computation())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Subscriber<List<CurrencyTypeEntity>>() {
+                .subscribe(new Subscriber<List<CargoEntity>>() {
                     @Override
                     public void onCompleted() {
 
@@ -46,7 +66,7 @@ public class CargosPresenter extends BasePresenter<CargosContract.IView> impleme
                     }
 
                     @Override
-                    public void onNext(List<CurrencyTypeEntity> entities) {
+                    public void onNext(List<CargoEntity> entities) {
                         Logger.write(null);
                     }
                 })

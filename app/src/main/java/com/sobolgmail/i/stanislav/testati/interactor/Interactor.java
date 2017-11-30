@@ -2,6 +2,7 @@ package com.sobolgmail.i.stanislav.testati.interactor;
 
 import com.sobolgmail.i.stanislav.testati.MApplication;
 import com.sobolgmail.i.stanislav.testati.dataprovider.IDataProvider;
+import com.sobolgmail.i.stanislav.testati.entity.CargoEntity;
 import com.sobolgmail.i.stanislav.testati.entity.CurrencyTypeEntity;
 
 import java.util.List;
@@ -27,5 +28,10 @@ public class Interactor implements IInteractor {
     @Override
     public Observable<List<CurrencyTypeEntity>> getCurrencyTypesObservable() {
         return dataProvider.getCurrencyTypesObservable();
+    }
+
+    @Override
+    public Observable<List<CargoEntity>> getCargosObservable() {
+        return dataProvider.getCargosObservable();
     }
 }

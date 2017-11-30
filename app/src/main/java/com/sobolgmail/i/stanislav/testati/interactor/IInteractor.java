@@ -1,5 +1,6 @@
 package com.sobolgmail.i.stanislav.testati.interactor;
 
+import com.sobolgmail.i.stanislav.testati.entity.CargoEntity;
 import com.sobolgmail.i.stanislav.testati.entity.CurrencyTypeEntity;
 
 import java.util.List;
@@ -12,5 +13,8 @@ import rx.Observable;
  */
 
 public interface IInteractor {
+
     Observable<List<CurrencyTypeEntity>> getCurrencyTypesObservable();
+
+    Observable<List<CargoEntity>> getCargosObservable();
 }

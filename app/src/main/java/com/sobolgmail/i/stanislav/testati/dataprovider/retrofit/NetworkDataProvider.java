@@ -3,8 +3,10 @@ package com.sobolgmail.i.stanislav.testati.dataprovider.retrofit;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.sobolgmail.i.stanislav.testati.dataprovider.IDataProvider;
+import com.sobolgmail.i.stanislav.testati.entity.CargoEntity;
 import com.sobolgmail.i.stanislav.testati.entity.CurrencyTypeEntity;
 import com.sobolgmail.i.stanislav.testati.utils.Logger;
+import com.sobolgmail.i.stanislav.testati.utils.StringUtils;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -25,31 +27,45 @@ import rx.schedulers.Schedulers;
 public class NetworkDataProvider implements IDataProvider {
 
     private static final long NETWORK_TIMEOUT_MS = 60 * 1000;
-    private static final String BASE_URL = "http://api.ati.su/v1.0/";
+    private static final String CURRENCY_TYPES_URL = "http://api.ati.su/v1.0/";
+    private static final String CARGOS_URL = "http://loads.ati.su/api/";
 
     private Retrofit retrofit;
-    private RetrofitAPIService service;
+    private RetrofitAPIService currencyTypeService;
+    private RetrofitAPIService cargosService;
 
     @Override
     public Observable<List<CurrencyTypeEntity>> getCurrencyTypesObservable() {
-        return getService().getCurrencyTypesObservable();
+        return getCurrencyTypeService().getCurrencyTypesObservable();
     }
 
-    private RetrofitAPIService getService() {
-        if (service == null) {
-            service = getRetrofit().create(RetrofitAPIService.class);
+    @Override
+    public Observable<List<CargoEntity>> getCargosObservable() {
+        return getCargosService().getCargosObservable("application/json", new PostBody());
+    }
+
+    private RetrofitAPIService getCurrencyTypeService() {
+        if (currencyTypeService == null) {
+            currencyTypeService = getRetrofit(CURRENCY_TYPES_URL).create(RetrofitAPIService.class);
         }
-        return service;
+        return currencyTypeService;
     }
 
-    private Retrofit getRetrofit() {
+    private RetrofitAPIService getCargosService() {
+        if (cargosService == null) {
+            cargosService = getRetrofit(CARGOS_URL).create(RetrofitAPIService.class);
+        }
+        return cargosService;
+    }
+
+    private Retrofit getRetrofit(final String baseUrl) {
         if (retrofit == null) {
-            retrofit = getNewRetrofit(BASE_URL);
+            retrofit = getNewRetrofit(baseUrl);
         }
         return retrofit;
     }
 
-    private Retrofit getNewRetrofit(String baseUrl) {
+    private Retrofit getNewRetrofit(final String baseUrl) {
         RxJavaCallAdapterFactory rxAdapter = RxJavaCallAdapterFactory.createWithScheduler(Schedulers.io());
         return new Retrofit.Builder()
                 .baseUrl(baseUrl)
@@ -59,12 +75,14 @@ public class NetworkDataProvider implements IDataProvider {
                 .build();
     }
 
-
     private OkHttpClient getOkHttpClient() {
         final HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor(new HttpLoggingInterceptor.Logger() {
             @Override
             public void log(String message) {
-                Logger.writeHttp(message);
+                final List<String> list = StringUtils.sliceString(message, 1024);
+                for (final String item : list) {
+                    Logger.writeHttp(item);
+                }
             }
         });
         loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
@@ -73,15 +91,6 @@ public class NetworkDataProvider implements IDataProvider {
                 .connectTimeout(NETWORK_TIMEOUT_MS, TimeUnit.MILLISECONDS)
                 .readTimeout(NETWORK_TIMEOUT_MS, TimeUnit.MILLISECONDS)
                 .addInterceptor(loggingInterceptor)
-//                .addInterceptor(new Interceptor() {
-//                    @Override
-//                    public Response intercept(Chain chain) throws IOException {
-//                        Request request = chain.request()
-//                                .newBuilder()
-//                                .build();
-//                        return chain.proceed(request);
-//                    }
-//                })
                 .build();
     }
 

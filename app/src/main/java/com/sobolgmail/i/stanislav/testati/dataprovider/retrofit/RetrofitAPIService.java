@@ -1,10 +1,14 @@
 package com.sobolgmail.i.stanislav.testati.dataprovider.retrofit;
 
+import com.sobolgmail.i.stanislav.testati.entity.CargoEntity;
 import com.sobolgmail.i.stanislav.testati.entity.CurrencyTypeEntity;
 
 import java.util.List;
 
+import retrofit2.http.Body;
 import retrofit2.http.GET;
+import retrofit2.http.Header;
+import retrofit2.http.POST;
 import rx.Observable;
 
 /**
@@ -15,4 +19,7 @@ import rx.Observable;
 public interface RetrofitAPIService {
     @GET("dictionaries/currencyTypes")
     Observable<List<CurrencyTypeEntity>> getCurrencyTypesObservable();
+
+    @POST("loads")
+    Observable<List<CargoEntity>> getCargosObservable(@Header("Content-Type") String contentType, @Body PostBody postBody);
 }
