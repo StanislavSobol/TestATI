@@ -3,8 +3,9 @@ package com.sobolgmail.i.stanislav.testati.interactor;
 import com.sobolgmail.i.stanislav.testati.MApplication;
 import com.sobolgmail.i.stanislav.testati.dataprovider.IDataProvider;
 import com.sobolgmail.i.stanislav.testati.entity.CargoEntity;
-import com.sobolgmail.i.stanislav.testati.entity.CargoPageEntity;
 import com.sobolgmail.i.stanislav.testati.entity.CurrencyTypeEntity;
+import com.sobolgmail.i.stanislav.testati.entity.response.CargoPageResponse;
+import com.sobolgmail.i.stanislav.testati.entity.response.CurrencyTypeResponse;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,29 +35,31 @@ public class Interactor implements IInteractor {
     }
 
     @Override
-    public Observable<CargoPageEntity> getCargoPageObservable() {
+    public Observable<CargoPageResponse> getCargoPageObservable() {
         return dataProvider.getCargoPageObservable();
     }
 
     @Override
     public Observable<List<CargoEntity>> getCargosObservable() {
-        return dataProvider.getCargoPageObservable().flatMap(new Func1<CargoPageEntity, Observable<List<CargoEntity>>>() {
+        return dataProvider.getCargoPageObservable().flatMap(new Func1<CargoPageResponse, Observable<List<CargoEntity>>>() {
             @Override
-            public Observable<List<CargoEntity>> call(CargoPageEntity cargoPageEntity) {
+            public Observable<List<CargoEntity>> call(CargoPageResponse cargoPageResponse) {
                 final List<CargoEntity> result = new ArrayList<>();
-
-                for (final CargoPageEntity.Load item : cargoPageEntity.getLoads()) {
-                    final CargoEntity cargoEntity = new CargoEntity();
-                    cargoEntity.setId(item.getId());
-                    cargoEntity.setCargoType(item.getLoad().getCargoType());
-                    cargoEntity.setCity(item.getUnloading().getLocation().getCity());
-                    cargoEntity.setNote(item.getNote());
-                    cargoEntity.setCurrencyId(item.getRate().getCurrencyId());
-                    result.add(cargoEntity);
+                for (final CargoPageResponse.Load item : cargoPageResponse.getLoads()) {
+                    result.add(CargoEntity.fromResponseItem(item));
                 }
-
                 return Observable.from(result).toList();
             }
         });
+    }
+
+    @Override
+    public void writeCurrencyTypesToDb(List<CurrencyTypeEntity> currencyTypeEntities) {
+
+    }
+
+    @Override
+    public Observable<List<CurrencyTypeEntity>> getCurrencyTypesObservableFromDb() {
+        return null;
     }
 }

@@ -75,6 +75,7 @@ abstract public class BaseFragment<T extends IBasePresenter> extends Fragment im
         if (presenter == null) {
             Logger.write("NEW! ");
             PresentersProvider.put(this, presenter = createPresenter());
+            presenter.setChangingConfiguration(savedInstanceState != null);
         }
         initViews();
     }

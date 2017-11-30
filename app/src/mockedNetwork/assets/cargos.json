@@ -1,0 +1,2288 @@
+{
+  "totalItems": 98325,
+  "hiddenItems": 0,
+  "itemsPerPage": 10,
+  "lastSearchTime": "0001-01-01T00:00:00",
+  "loads": [{
+    "id": "2da92ea4-a51c-4ba4-9082-1f730d7e5c8a",
+    "addDate": "2017-11-29T10:56:09.237Z",
+    "changeDate": "2017-11-30T00:02:27.55Z",
+    "note": "",
+    "combinedId": "71547933E10A4CB24201694F3C5F72ACD1738863AD7BF0932B13D747C00C80B24A5BD2DB6F3996B3587DD7F419F99B4D",
+    "route": {
+      "country": "RUS",
+      "distance": 326,
+      "distanceText": "326 км",
+      "distanceLink": "http://ati.su/Trace/Default.aspx?EntityType=Load&FerriesTry=1&Cities=1_1277;7_3611;7_9047;2_7601;&LargeCities=true",
+      "distanceTooltip": "посмотреть маршрут Люберцы - Москва - Дзержинский - Новомичуринск",
+      "totalDistance": 0
+    },
+    "truck": {
+      "carTypes": [1],
+      "carTypesBitSum": 1,
+      "loadingTypes": [1],
+      "unloadingTypes": [1],
+      "loadingLogicalOperator": 1,
+      "unloadingLogicalOperator": 1,
+      "tir": false,
+      "cmr": false,
+      "t1": false,
+      "sanPassport": false,
+      "quantity": 1,
+      "beltCount": 4,
+      "scepka": false,
+      "pnevmohod": false,
+      "koniki": false
+    },
+    "load": {
+      "weight": 20.0,
+      "volume": 82.0,
+      "length": 0.0,
+      "height": 0.0,
+      "width": 0.0,
+      "lengthHighlight": false,
+      "heightHighlight": false,
+      "widthHighlight": false,
+      "packType": 0,
+      "palletCount": 0,
+      "dogruz": false,
+      "dogruzPossible": false,
+      "onlyToSeparateCar": true,
+      "sborGruz": false,
+      "cargoType": "ТНП",
+      "adr": 0
+    },
+    "loading": {
+      "location": {
+        "city": "Люберцы",
+        "region": "Московская область",
+        "lat": 0.0,
+        "lon": 0.0,
+        "geoCode": "2_1277",
+        "fullGeoName": "Люберцы, Московская область, Россия"
+      },
+      "extraLoadings": [{
+        "distance": 0,
+        "city": "Москва",
+        "region": "Москва (регион)",
+        "country": "Россия"
+      }, {
+        "distance": 0,
+        "city": "Дзержинский",
+        "region": "Московская область",
+        "country": "Россия"
+      }
+      ],
+      "firstDate": "2017-11-30T00:02:27.55Z",
+      "lastDate": "2017-11-30T00:02:27.55Z",
+      "periodicity": "",
+      "periodicityId": 0,
+      "dateType": 1,
+      "time": "",
+      "ready": false
+    },
+    "unloading": {
+      "location": {
+        "city": "Новомичуринск",
+        "region": "Рязанская область",
+        "lat": 0.0,
+        "lon": 0.0,
+        "geoCode": "2_7601",
+        "fullGeoName": "Новомичуринск, Рязанская область, Россия",
+        "customs": ""
+      },
+      "extraLoadings": [],
+      "firstDate": "0001-01-01T00:00:00",
+      "lastDate": "0001-01-01T00:00:00",
+      "periodicityId": 0,
+      "dateType": 0,
+      "time": "",
+      "ready": false
+    },
+    "rate": {
+      "rateType": 0,
+      "moneyType"
+      : 22,
+      "price": 24000.0000,
+      "priceNds": 0.0000,
+      "priceNoNds": 0.0000,
+      "rateModifier": 1,
+      "currency": 1,
+      "currencyIdPerKm": 8,
+      "prepay": 0,
+      "payDays": 0,
+      "payOnUnload": false,
+      "negotiation": false,
+      "direct": false,
+      "noLoad": false
+    },
+    "konturFocusLamp": {
+      "isHidden": false,
+      "lampColor": "light-multicolor",
+      "tooltipText": "Об этой или связанных с ней фирмах найдены факты. Рекомендуем ознакомиться с ними перед началом сотрудничества"
+    },
+    "request": {
+      "ownerPrice": "",
+      "counterOffer": {
+        "text": "<b>Отправить встречное предложение</b><br/>Нет встречных предложений",
+        "textOffer": "Отправить предложение",
+        "statusOffer": 5,
+        "isHighlightColor": false,
+        "offerCount": 0
+      },
+      "truePrice": {
+        "isMyTruePrice": false
+      },
+      "absenceClaimed": false,
+      "hasMyComplaint": false,
+      "isOfferAvailable": false
+    },
+    "firm": {
+      "id": "1520357",
+      "brand": "КОМПАНИЯ ФТК",
+      "name": "КОМПАНИЯ ФТК, ООО",
+      "firmFullName": "КОМПАНИЯ ФТК, ООО",
+      "comment": "",
+      "profile": "эксп.",
+      "city": "Самара",
+      "isDeleted": false,
+      "rating": {
+        "firmId": 1520357,
+        "displayId": "1520357",
+        "status": 1,
+        "vip": false,
+        "score": 2.7,
+        "description": "Балл участника АТИ: 2.7. Нет красных баллов, количество рекомендаций больше 2-х и есть балл за соответствие названия",
+        "showPassport": true,
+        "scorePercent": 52,
+        "fakePassport": false,
+        "konturFocusLamp": {
+          "isHidden": false,
+          "lampColor": "light-multicolor",
+          "tooltipText": "Об этой или связанных с ней фирмах найдены факты. Рекомендуем ознакомиться с ними перед началом сотрудничества"
+        },
+        "topRating": {
+          "cityRating": {
+            "position": 325,
+            "ratingType": "Dispatcher ",
+            "tooltip": "<div><span class='rating-tooltip-header'>Место из 431 среди участников с профилем Экспедитор и Диспетчер на 30 ноября 2017</span><span class='rating-tooltip-body'></span></div>",
+            "hasRating": false,
+            "recalculatedStatus": "",
+            "ratingUrl": "http://ati.su/rating?geo=2_220&firmTypes=2,4,5"
+          },
+          "countryRating": {
+            "position": 15989,
+            "ratingType": "Dispatcher ",
+            "tooltip": "<div><span class='rating-tooltip-header'>Место из 21115 среди участников с профилем Экспедитор и Диспетчер на 30 ноября 2017.</span><span class='rating-tooltip-body'></span></div>",
+            "hasRating": false,
+            "recalculatedStatus": "",
+            "ratingUrl": "http://ati.su/rating?geo=0_1&firmTypes=2,4,5"
+          }
+        }
+      },
+      "pointsDescription": {
+        "sumPoint": 2.7,
+        "points": [{
+          "key": "Данные фирмы в АТИ (название, город) совпадают с настоящими данными фирмы.",
+          "value": 1.0
+        }, {
+          "key": "За давность регистрации в АвтоТрансИнфо",
+          "value": 0.1
+        }, {
+          "key": "За время существования юридического лица или индивидуального предпринимателя",
+          "value": 0.2
+        }, {
+          "key": "Свидетельство ведения фирмой текущей хозяйственной деятельности.",
+          "value": 0.5
+        }, {
+          "key": "За проф. деятельность в АТИ.",
+          "value": 0.9
+        }
+        ]
+      },
+      "ourTribunal": false,
+      "vtsTrucks": [],
+      "recommendations": 267,
+      "claims": 0,
+      "unfairPartner": 0,
+      "associations": [],
+      "contacts": [{
+        "id": 6,
+        "email": true,
+        "skype": "",
+        "icq": "720952510",
+        "city": "",
+        "phones": [{
+          "brandName": "",
+          "region": "г. Тольятти|Самарская обл.",
+          "number": "+7(8482)650224 (доб.28)"
+        }, {
+          "brandPicture": "mo_beeline.png",
+          "brandName": "Билайн",
+          "region": "Самарская обл.",
+          "number": "+7(962)6139001"
+        }
+        ],
+        "name": "Мария П."
+      }, {
+        "id": 26,
+        "email": false,
+        "skype": "",
+        "icq": "",
+        "city": "",
+        "phones": [{
+          "brandName": "Ростелеком",
+          "region": "Российская Федерация",
+          "number": "+7(800)7070462"
+        }
+        ],
+        "name": "Бесплатный номер"
+      }
+      ],
+      "isActiveUserAtiDoc": false
+    },
+    "showMsgToUnregistered": true,
+    "showFirmToUnregistered": false,
+    "isHidden": false,
+    "krugoreis": false,
+    "boards": [],
+    "apiClient": {
+      "appId": ""
+    },
+    "deal": {
+      "dealType": 0,
+      "dealStatus": 0
+    },
+    "mayTaken": false
+  }, {
+    "id": "b34da8fe-5cf1-4d5c-ba33-050020f2b245",
+    "addDate": "2017-11-30T00:02:26.797Z",
+    "changeDate": "2017-11-30T00:02:26.797Z",
+    "note": "Мерседес, 211 кузов, седан.",
+    "combinedId": "3F7EE3C261DC74B65288340836300847ECADA28FB909EB6C93AA84B055EA5F0CDB6E23B2AC2A52FAB994BABA0D29574E",
+    "route": {
+      "country": "RUS",
+      "distance": 504,
+      "distanceText": "504 км",
+      "distanceLink": "http://ati.su/Trace/Default.aspx?EntityType=Load&FerriesTry=1&Cities=1_3869;2_3071;&LargeCities=true",
+      "distanceTooltip": "посмотреть маршрут Спасск-Дальний - Хабаровск",
+      "totalDistance": 0
+    },
+    "truck": {
+      "carTypes": [32768],
+      "carTypesBitSum": 32768,
+      "loadingTypes": [],
+      "unloadingTypes": [],
+      "loadingLogicalOperator": 1,
+      "unloadingLogicalOperator": 1,
+      "tir": false,
+      "cmr": false,
+      "t1": false,
+      "sanPassport": false,
+      "quantity": 1,
+      "beltCount": 0,
+      "scepka": false,
+      "pnevmohod": false,
+      "koniki": false
+    },
+    "load": {
+      "weight": 1.8,
+      "volume": 0.0,
+      "length": 4.65,
+      "height": 1.6,
+      "width": 1.8,
+      "lengthHighlight": false,
+      "heightHighlight": false,
+      "widthHighlight": false,
+      "packType": 0,
+      "palletCount": 0,
+      "dogruz": true,
+      "dogruzPossible": false,
+      "onlyToSeparateCar": false,
+      "sborGruz": false,
+      "cargoType": "Транспортные средства",
+      "adr": 0
+    },
+    "loading": {
+      "location": {
+        "city": "Спасск-Дальний",
+        "region": "Приморский край",
+        "lat": 0.0,
+        "lon": 0.0,
+        "geoCode": "2_3869",
+        "fullGeoName": "Спасск-Дальний, Приморский край, Россия"
+      },
+      "firstDate": "2017-11-29T21:00:00Z",
+      "lastDate": "2017-11-29T21:00:00Z",
+      "periodicity": "",
+      "periodicityId": 0,
+      "dateType": 0,
+      "time": "",
+      "ready": true
+    },
+    "unloading": {
+      "location": {
+        "city": "Хабаровск",
+        "region": "",
+        "lat": 0.0,
+        "lon": 0.0,
+        "geoCode": "2_3071",
+        "fullGeoName": "Хабаровск, Хабаровский край, Россия",
+        "customs": ""
+      },
+      "firstDate": "0001-01-01T00:00:00",
+      "lastDate": "0001-01-01T00:00:00",
+      "periodicityId": 0,
+      "dateType": 0,
+      "time": "",
+      "ready": false
+    },
+    "rate": {
+      "rateType": 0,
+      "moneyType": 22,
+      "price": 10000.0000,
+      "priceNds": 0.0000,
+      "priceNoNds": 0.0000,
+      "rateModifier": 1,
+      "currency": 1,
+      "currencyIdPerKm": 8,
+      "prepay": 0,
+      "payDays": 0,
+      "payOnUnload": false,
+      "negotiation": false,
+      "direct": true,
+      "noLoad": false
+    },
+    "konturFocusLamp": {
+      "isHidden": false,
+      "lampColor": "light-multicolor",
+      "tooltipText": "Об этой или связанных с ней фирмах найдены факты. Рекомендуем ознакомиться с ними перед началом сотрудничества"
+    },
+    "request": {
+      "ownerPrice": "",
+      "absenceClaimed": false,
+      "hasMyComplaint": false,
+      "isOfferAvailable": false
+    },
+    "showMsgToUnregistered": false,
+    "showFirmToUnregistered": false,
+    "isHidden": false,
+    "krugoreis": false,
+    "boards": [],
+    "deal": {
+      "dealType": 0,
+      "dealStatus": 0
+    },
+    "mayTaken": false
+  }, {
+    "id": "24baf110-91c6-48df-a18a-b6f5993781a0",
+    "addDate": "2017-11-28T09:47:45.667Z",
+    "changeDate": "2017-11-30T00:02:24.48Z",
+    "note": "",
+    "combinedId": "A1D1E45332738AA56E2957A06554E57B88ED75694DAA485423B58486B9FFF569284B96DBEC2E8FFEC9648540F336FB10",
+    "route": {
+      "country": "RUS",
+      "distance": 1643,
+      "distanceText": "1643 км",
+      "distanceLink": "http://ati.su/Trace/Default.aspx?EntityType=Load&FerriesTry=1&Cities=1_1376;2_120;&LargeCities=true",
+      "distanceTooltip": "посмотреть маршрут Балахна - Краснодар",
+      "totalDistance": 0
+    },
+    "truck": {
+      "carTypes": [1, 4, 8],
+      "carTypesBitSum": 13,
+      "loadingTypes": [4],
+      "unloadingTypes": [4],
+      "loadingLogicalOperator": 1,
+      "unloadingLogicalOperator": 1,
+      "tir": false,
+      "cmr": false,
+      "t1": false,
+      "sanPassport": false,
+      "quantity": 1,
+      "beltCount": 0,
+      "scepka": false,
+      "pnevmohod": false,
+      "koniki": false
+    },
+    "load": {
+      "weight": 21.5,
+      "volume": 82.0,
+      "length": 0.0,
+      "height": 0.0,
+      "width": 0.0,
+      "lengthHighlight": false,
+      "heightHighlight": false,
+      "widthHighlight": false,
+      "packType": 4,
+      "palletCount": 0,
+      "dogruz": false,
+      "dogruzPossible": false,
+      "onlyToSeparateCar": true,
+      "sborGruz": false,
+      "cargoType": "Бумага",
+      "adr": 0
+    },
+    "loading": {
+      "location": {
+        "city": "Балахна",
+        "region": "Нижегородская область",
+        "lat": 0.0,
+        "lon": 0.0,
+        "geoCode": "2_1376",
+        "fullGeoName": "Балахна, Нижегородская область, Россия"
+      },
+      "firstDate": "2017-11-30T00:02:24.48Z",
+      "lastDate": "2017-12-01T00:02:24.48Z",
+      "periodicity": "",
+      "periodicityId": 0,
+      "dateType": 1,
+      "time": "",
+      "ready": true
+    },
+    "unloading": {
+      "location": {
+        "city": "Краснодар",
+        "region": "",
+        "lat": 0.0,
+        "lon": 0.0,
+        "geoCode": "2_120",
+        "fullGeoName": "Краснодар, Краснодарский край, Россия",
+        "customs": ""
+      },
+      "firstDate": "0001-01-01T00:00:00",
+      "lastDate": "0001-01-01T00:00:00",
+      "periodicityId": 0,
+      "dateType": 0,
+      "time": "",
+      "ready": false
+    },
+    "rate": {
+      "rateType": 0,
+      "moneyType": 22,
+      "price": 71000.0000,
+      "priceNds": 0.0000,
+      "priceNoNds": 0.0000,
+      "rateModifier": 1,
+      "currency": 1,
+      "currencyIdPerKm": 8,
+      "prepay": 0,
+      "payDays": 0,
+      "payOnUnload": false,
+      "negotiation": false,
+      "direct": false,
+      "noLoad": false
+    },
+    "konturFocusLamp": {
+      "isHidden": false,
+      "lampColor": "light-multicolor",
+      "tooltipText": "Об этой или связанных с ней фирмах найдены факты. Рекомендуем ознакомиться с ними перед началом сотрудничества"
+    },
+    "request": {
+      "ownerPrice": "",
+      "counterOffer": {
+        "text": "<b>Отправить встречное предложение</b><br/>Нет встречных предложений",
+        "textOffer": "Отправить предложение",
+        "statusOffer": 5,
+        "isHighlightColor": false,
+        "offerCount": 0
+      },
+      "truePrice": {
+        "isMyTruePrice": false
+      },
+      "absenceClaimed": false,
+      "hasMyComplaint": false,
+      "isOfferAvailable": false
+    },
+    "firm": {
+      "id": "1473763",
+      "brand": "",
+      "name": "МАЙВЭЙ ТК, ООО",
+      "firmFullName": "МАЙВЭЙ ТК, ООО",
+      "comment": "",
+      "profile": "эксп.",
+      "city": "Тольятти",
+      "isDeleted": false,
+      "rating": {
+        "firmId": 1473763,
+        "displayId": "1473763",
+        "status": 1,
+        "vip": false,
+        "score": 3.2,
+        "description": "Балл участника АТИ: 3.2. Нет красных баллов, количество рекомендаций больше 2-х и есть балл за соответствие названия",
+        "showPassport": true,
+        "scorePercent": 68,
+        "fakePassport": false,
+        "konturFocusLamp": {
+          "isHidden": false,
+          "lampColor": "light-multicolor",
+          "tooltipText": "Об этой или связанных с ней фирмах найдены факты. Рекомендуем ознакомиться с ними перед началом сотрудничества"
+        },
+        "topRating": {
+          "cityRating": {
+            "position": 206,
+            "ratingType": "Dispatcher ",
+            "tooltip": "<div><span class='rating-tooltip-header'>Место из 317 среди участников с профилем Экспедитор и Диспетчер на 30 ноября 2017</span><span class='rating-tooltip-body'></span></div>",
+            "hasRating": false,
+            "recalculatedStatus": "",
+            "ratingUrl": "http://ati.su/rating?geo=2_253&firmTypes=2,4,5"
+          },
+          "countryRating": {
+            "position": 14723,
+            "ratingType": "Dispatcher ",
+            "tooltip": "<div><span class='rating-tooltip-header'>Место из 21115 среди участников с профилем Экспедитор и Диспетчер на 30 ноября 2017.</span><span class='rating-tooltip-body'></span></div>",
+            "hasRating": false,
+            "recalculatedStatus": "",
+            "ratingUrl": "http://ati.su/rating?geo=0_1&firmTypes=2,4,5"
+          }
+        }
+      },
+      "pointsDescription": {
+        "sumPoint": 3.2,
+        "points": [{
+          "key": "Данные фирмы в АТИ (название, город) совпадают с настоящими данными фирмы.",
+          "value": 1.0
+        }, {
+          "key": "За давность регистрации в АвтоТрансИнфо",
+          "value": 0.1
+        }, {
+          "key": "За время существования юридического лица или индивидуального предпринимателя",
+          "value": 0.8
+        }, {
+          "key": "Свидетельство ведения фирмой текущей хозяйственной деятельности.",
+          "value": 0.5
+        }, {
+          "key": "За проф. деятельность в АТИ.",
+          "value": 0.8
+        }
+        ]
+      },
+      "ourTribunal": false,
+      "vtsTrucks": [],
+      "recommendations": 222,
+      "claims": 0,
+      "unfairPartner": 0,
+      "associations": [],
+      "contacts": [{
+        "id": 14,
+        "email": true,
+        "skype": "",
+        "icq": "725169748",
+        "city": "",
+        "phones": [{
+          "brandName": "",
+          "region": "Российская Федерация",
+          "number": "+7(800)5551709 (доб.129)"
+        }, {
+          "brandPicture": "mo_beeline.png",
+          "brandName": "Билайн",
+          "region": "Самарская обл.",
+          "number": "+7(962)6136497"
+        }
+        ],
+        "name": "Анна"
+      }, {
+        "id": 30,
+        "email": false,
+        "skype": "",
+        "icq": "",
+        "city": "",
+        "phones": [{
+          "brandName": "",
+          "region": "Российская Федерация",
+          "number": "+7(800)5551709"
+        }
+        ],
+        "name": "Бесплатный номер"
+      }
+      ],
+      "isActiveUserAtiDoc": false
+    },
+    "showMsgToUnregistered": true,
+    "showFirmToUnregistered": false,
+    "isHidden": false,
+    "krugoreis": false,
+    "boards": [],
+    "apiClient": {
+      "appId": ""
+    },
+    "deal": {
+      "dealType": 0,
+      "dealStatus": 0
+    },
+    "mayTaken": false
+  }, {
+    "id": "1beaf812-0ab4-4ae3-8697-46631e2c518b",
+    "addDate": "2017-11-28T10:49:14.577Z",
+    "changeDate": "2017-11-30T00:02:18.393Z",
+    "note": "",
+    "combinedId": "46CE82657C80AC23646B8E73A50DFA4838DE9F336861130FE592DC76F8FD43B58566BE3CC049209EBDAEC45C252313F2",
+    "route": {
+      "country": "RUS",
+      "distance": 1643,
+      "distanceText": "1643 км",
+      "distanceLink": "http://ati.su/Trace/Default.aspx?EntityType=Load&FerriesTry=1&Cities=1_1376;2_120;&LargeCities=true",
+      "distanceTooltip": "посмотреть маршрут Балахна - Краснодар",
+      "totalDistance": 0
+    },
+    "truck": {
+      "carTypes": [1, 4, 8],
+      "carTypesBitSum": 13,
+      "loadingTypes": [4],
+      "unloadingTypes": [4],
+      "loadingLogicalOperator": 1,
+      "unloadingLogicalOperator": 1,
+      "tir": false,
+      "cmr": false,
+      "t1": false,
+      "sanPassport": false,
+      "quantity": 1,
+      "beltCount": 0,
+      "scepka": false,
+      "pnevmohod": false,
+      "koniki": false
+    },
+    "load": {
+      "weight": 21.5,
+      "volume": 82.0,
+      "length": 0.0,
+      "height": 0.0,
+      "width": 0.0,
+      "lengthHighlight": false,
+      "heightHighlight": false,
+      "widthHighlight": false,
+      "packType": 4,
+      "palletCount": 0,
+      "dogruz": false,
+      "dogruzPossible": false,
+      "onlyToSeparateCar": true,
+      "sborGruz": false,
+      "cargoType": "Бумага",
+      "adr": 0
+    },
+    "loading": {
+      "location": {
+        "city": "Балахна",
+        "region": "Нижегородская область",
+        "lat": 0.0,
+        "lon": 0.0,
+        "geoCode": "2_1376",
+        "fullGeoName": "Балахна, Нижегородская область, Россия"
+      },
+      "firstDate": "2017-11-30T00:02:18.393Z",
+      "lastDate": "2017-12-01T00:02:18.393Z",
+      "periodicity": "",
+      "periodicityId": 0,
+      "dateType": 1,
+      "time": "",
+      "ready": true
+    },
+    "unloading": {
+      "location": {
+        "city": "Краснодар",
+        "region": "",
+        "lat": 0.0,
+        "lon": 0.0,
+        "geoCode": "2_120",
+        "fullGeoName": "Краснодар, Краснодарский край, Россия",
+        "customs": ""
+      },
+      "firstDate": "0001-01-01T00:00:00",
+      "lastDate": "0001-01-01T00:00:00",
+      "periodicityId": 0,
+      "dateType": 0,
+      "time": "",
+      "ready": false
+    },
+    "rate": {
+      "rateType": 0,
+      "moneyType": 22,
+      "price": 71000.0000,
+      "priceNds": 0.0000,
+      "priceNoNds": 0.0000,
+      "rateModifier": 1,
+      "currency": 1,
+      "currencyIdPerKm": 8,
+      "prepay": 0,
+      "payDays": 0,
+      "payOnUnload": false,
+      "negotiation": false,
+      "direct": false,
+      "noLoad": false
+    },
+    "konturFocusLamp": {
+      "isHidden": false,
+      "lampColor": "light-multicolor",
+      "tooltipText": "Об этой или связанных с ней фирмах найдены факты. Рекомендуем ознакомиться с ними перед началом сотрудничества"
+    },
+    "request": {
+      "ownerPrice": "",
+      "counterOffer": {
+        "text": "<b>Отправить встречное предложение</b><br/>Нет встречных предложений",
+        "textOffer": "Отправить предложение",
+        "statusOffer": 5,
+        "isHighlightColor": false,
+        "offerCount": 0
+      },
+      "truePrice": {
+        "isMyTruePrice": false
+      },
+      "absenceClaimed": false,
+      "hasMyComplaint": false,
+      "isOfferAvailable": false
+    },
+    "firm": {
+      "id": "1488971",
+      "brand": "",
+      "name": "ТРАНСПОРТНОЕ БЮРО, ООО",
+      "firmFullName": "ТРАНСПОРТНОЕ БЮРО, ООО",
+      "comment": "",
+      "profile": "эксп.",
+      "city": "Самара",
+      "isDeleted": false,
+      "rating": {
+        "firmId": 1488971,
+        "displayId": "1488971",
+        "status": 1,
+        "vip": false,
+        "score": 2.6,
+        "description": "Балл участника АТИ: 2.6. Нет красных баллов, количество рекомендаций больше 2-х и есть балл за соответствие названия",
+        "showPassport": true,
+        "scorePercent": 52,
+        "fakePassport": false,
+        "konturFocusLamp": {
+          "isHidden": false,
+          "lampColor": "light-multicolor",
+          "tooltipText": "Об этой или связанных с ней фирмах найдены факты. Рекомендуем ознакомиться с ними перед началом сотрудничества"
+        },
+        "topRating": {
+          "cityRating": {
+            "position": 333,
+            "ratingType": "Dispatcher ",
+            "tooltip": "<div><span class='rating-tooltip-header'>Место из 431 среди участников с профилем Экспедитор и Диспетчер на 30 ноября 2017</span><span class='rating-tooltip-body'></span></div>",
+            "hasRating": false,
+            "recalculatedStatus": "",
+            "ratingUrl": "http://ati.su/rating?geo=2_220&firmTypes=2,4,5"
+          },
+          "countryRating": {
+            "position": 16260,
+            "ratingType": "Dispatcher ",
+            "tooltip": "<div><span class='rating-tooltip-header'>Место из 21115 среди участников с профилем Экспедитор и Диспетчер на 30 ноября 2017.</span><span class='rating-tooltip-body'></span></div>",
+            "hasRating": false,
+            "recalculatedStatus": "",
+            "ratingUrl": "http://ati.su/rating?geo=0_1&firmTypes=2,4,5"
+          }
+        }
+      },
+      "pointsDescription": {
+        "sumPoint": 2.6,
+        "points": [{
+          "key": "Данные фирмы в АТИ (название, город) совпадают с настоящими данными фирмы.",
+          "value": 1.0
+        }, {
+          "key": "За давность регистрации в АвтоТрансИнфо",
+          "value": 0.1
+        }, {
+          "key": "За время существования юридического лица или индивидуального предпринимателя",
+          "value": 0.2
+        }, {
+          "key": "Свидетельство ведения фирмой текущей хозяйственной деятельности.",
+          "value": 0.5
+        }, {
+          "key": "За проф. деятельность в АТИ.",
+          "value": 0.8
+        }
+        ]
+      },
+      "ourTribunal": false,
+      "vtsTrucks": [],
+      "recommendations": 320,
+      "claims": 0,
+      "unfairPartner": 0,
+      "associations": [],
+      "contacts": [{
+        "id": 22,
+        "email": true,
+        "skype": "live:n.kochetkova_3",
+        "icq": "",
+        "city": "",
+        "phones": [{
+          "brandName": "",
+          "region": "г. Тольятти|Самарская обл.",
+          "number": "+7(8482)650430 (доб.125)"
+        }, {
+          "brandPicture": "mo_megafon.png",
+          "brandName": "МегаФон",
+          "region": "Самарская обл.",
+          "number": "+7(939)7035650"
+        }
+        ],
+        "name": "Кочеткова Надежда Ивановна\t"
+      }, {
+        "id": 42,
+        "email": false,
+        "skype": "",
+        "icq": "",
+        "city": "",
+        "phones": [{
+          "brandName": "Ростелеком",
+          "region": "Российская Федерация",
+          "number": "+7(800)7075594"
+        }
+        ],
+        "name": "Бесплатный Единый"
+      }
+      ],
+      "isActiveUserAtiDoc": false
+    },
+    "showMsgToUnregistered": true,
+    "showFirmToUnregistered": false,
+    "isHidden": false,
+    "krugoreis": false,
+    "boards": [],
+    "apiClient": {
+      "appId": ""
+    },
+    "deal": {
+      "dealType": 0,
+      "dealStatus": 0
+    },
+    "mayTaken": false
+  }, {
+    "id": "6a209f6a-ffde-4619-86a3-f022c571e6a5",
+    "addDate": "2017-11-29T11:38:01.623Z",
+    "changeDate": "2017-11-30T00:02:12.337Z",
+    "note": "",
+    "combinedId": "912C5B9830CA76A8E496FCE100EE5A43ACC917EC0D713E10EDA7B27C3BBECFC68D384517F0490538BA3873FE72D326D2",
+    "route": {
+      "country": "RUS",
+      "distance": 576,
+      "distanceText": "576 км",
+      "distanceLink": "http://ati.su/Trace/Default.aspx?EntityType=Load&FerriesTry=1&Cities=1_1157;2_283;&LargeCities=true",
+      "distanceTooltip": "посмотреть маршрут Муром - Ульяновск",
+      "totalDistance": 0
+    },
+    "truck": {
+      "carTypes": [1, 128, 1024, 4096, 8192, 70368744177664],
+      "carTypesBitSum": 70368744191105,
+      "loadingTypes": [1],
+      "unloadingTypes": [1],
+      "loadingLogicalOperator": 1,
+      "unloadingLogicalOperator": 1,
+      "tir": false,
+      "cmr": false,
+      "t1": false,
+      "sanPassport": false,
+      "quantity": 1,
+      "beltCount": 0,
+      "scepka": false,
+      "pnevmohod": false,
+      "koniki": false
+    },
+    "load": {
+      "weight": 20.8,
+      "volume": 40.0,
+      "length": 10.0,
+      "height": 2.0,
+      "width": 2.0,
+      "lengthHighlight": false,
+      "heightHighlight": false,
+      "widthHighlight": false,
+      "packType": 4,
+      "palletCount": 0,
+      "dogruz": false,
+      "dogruzPossible": false,
+      "onlyToSeparateCar": true,
+      "sborGruz": false,
+      "cargoType": "Изделия из металла",
+      "adr": 0
+    },
+    "loading": {
+      "location": {
+        "city": "Муром",
+        "region": "Владимирская область",
+        "lat": 0.0,
+        "lon": 0.0,
+        "geoCode": "2_1157",
+        "fullGeoName": "Муром, Владимирская область, Россия"
+      },
+      "firstDate": "2017-11-30T00:02:12.337Z",
+      "lastDate": "2017-12-04T00:02:12.337Z",
+      "periodicity": "",
+      "periodicityId": 0,
+      "dateType": 1,
+      "time": "",
+      "ready": true
+    },
+    "unloading": {
+      "location": {
+        "city": "Ульяновск",
+        "region": "",
+        "lat": 0.0,
+        "lon": 0.0,
+        "geoCode": "2_283",
+        "fullGeoName": "Ульяновск, Ульяновская область, Россия",
+        "customs": ""
+      },
+      "firstDate": "0001-01-01T00:00:00",
+      "lastDate": "0001-01-01T00:00:00",
+      "periodicityId": 0,
+      "dateType": 0,
+      "time": "",
+      "ready": false
+    },
+    "rate": {
+      "rateType": 0,
+      "moneyType": 22,
+      "price": 33000.0000,
+      "priceNds": 0.0000,
+      "priceNoNds": 0.0000,
+      "rateModifier": 1,
+      "currency": 1,
+      "currencyIdPerKm": 8,
+      "prepay": 0,
+      "payDays": 0,
+      "payOnUnload": false,
+      "negotiation": false,
+      "direct": false,
+      "noLoad": false
+    },
+    "konturFocusLamp": {
+      "isHidden": false,
+      "lampColor": "light-multicolor",
+      "tooltipText": "Об этой или связанных с ней фирмах найдены факты. Рекомендуем ознакомиться с ними перед началом сотрудничества"
+    },
+    "request": {
+      "ownerPrice": "",
+      "counterOffer": {
+        "text": "<b>Отправить встречное предложение</b><br/>Нет встречных предложений",
+        "textOffer": "Отправить предложение",
+        "statusOffer": 5,
+        "isHighlightColor": false,
+        "offerCount": 0
+      },
+      "truePrice": {
+        "isMyTruePrice": false
+      },
+      "absenceClaimed": false,
+      "hasMyComplaint": false,
+      "isOfferAvailable": false
+    },
+    "firm": {
+      "id": "1488971",
+      "brand": "",
+      "name": "ТРАНСПОРТНОЕ БЮРО, ООО",
+      "firmFullName": "ТРАНСПОРТНОЕ БЮРО, ООО",
+      "comment": "",
+      "profile": "эксп.",
+      "city": "Самара",
+      "isDeleted": false,
+      "rating": {
+        "firmId": 1488971,
+        "displayId": "1488971",
+        "status": 1,
+        "vip": false,
+        "score": 2.6,
+        "description": "Балл участника АТИ: 2.6. Нет красных баллов, количество рекомендаций больше 2-х и есть балл за соответствие названия",
+        "showPassport": true,
+        "scorePercent": 52,
+        "fakePassport": false,
+        "konturFocusLamp": {
+          "isHidden": false,
+          "lampColor": "light-multicolor",
+          "tooltipText": "Об этой или связанных с ней фирмах найдены факты. Рекомендуем ознакомиться с ними перед началом сотрудничества"
+        },
+        "topRating": {
+          "cityRating": {
+            "position": 333,
+            "ratingType": "Dispatcher ",
+            "tooltip": "<div><span class='rating-tooltip-header'>Место из 431 среди участников с профилем Экспедитор и Диспетчер на 30 ноября 2017</span><span class='rating-tooltip-body'></span></div>",
+            "hasRating": false,
+            "recalculatedStatus": "",
+            "ratingUrl": "http://ati.su/rating?geo=2_220&firmTypes=2,4,5"
+          },
+          "countryRating": {
+            "position": 16260,
+            "ratingType": "Dispatcher ",
+            "tooltip": "<div><span class='rating-tooltip-header'>Место из 21115 среди участников с профилем Экспедитор и Диспетчер на 30 ноября 2017.</span><span class='rating-tooltip-body'></span></div>",
+            "hasRating": false,
+            "recalculatedStatus": "",
+            "ratingUrl": "http://ati.su/rating?geo=0_1&firmTypes=2,4,5"
+          }
+        }
+      },
+      "pointsDescription": {
+        "sumPoint": 2.6,
+        "points": [{
+          "key": "Данные фирмы в АТИ (название, город) совпадают с настоящими данными фирмы.",
+          "value": 1.0
+        }, {
+          "key": "За давность регистрации в АвтоТрансИнфо",
+          "value": 0.1
+        }, {
+          "key": "За время существования юридического лица или индивидуального предпринимателя",
+          "value": 0.2
+        }, {
+          "key": "Свидетельство ведения фирмой текущей хозяйственной деятельности.",
+          "value": 0.5
+        }, {
+          "key": "За проф. деятельность в АТИ.",
+          "value": 0.8
+        }
+        ]
+      },
+      "ourTribunal": false,
+      "vtsTrucks": [],
+      "recommendations": 320,
+      "claims": 0,
+      "unfairPartner": 0,
+      "associations": [],
+      "contacts": [{
+        "id": 4,
+        "email": true,
+        "skype": "live:c8582923ffa31abe",
+        "icq": "678375152",
+        "city": "",
+        "phones": [{
+          "brandName": "",
+          "region": "г. Тольятти|Самарская обл.",
+          "number": "+7(8482)650430 (доб.103)"
+        }, {
+          "brandPicture": "mo_megafon.png",
+          "brandName": "МегаФон",
+          "region": "Самарская обл.",
+          "number": "+7(927)6594678"
+        }
+        ],
+        "name": "Светлана Морозова"
+      }, {
+        "id": 42,
+        "email": false,
+        "skype": "",
+        "icq": "",
+        "city": "",
+        "phones": [{
+          "brandName": "Ростелеком",
+          "region": "Российская Федерация",
+          "number": "+7(800)7075594"
+        }
+        ],
+        "name": "Бесплатный Единый"
+      }
+      ],
+      "isActiveUserAtiDoc": false
+    },
+    "showMsgToUnregistered": true,
+    "showFirmToUnregistered": false,
+    "isHidden": false,
+    "krugoreis": false,
+    "boards": [],
+    "apiClient": {
+      "appId": ""
+    },
+    "deal": {
+      "dealType": 0,
+      "dealStatus": 0
+    },
+    "mayTaken": false
+  }, {
+    "id": "2f6e6fbb-22a9-49cc-8bd9-dec8da4e98f4",
+    "addDate": "2017-11-29T09:33:39.517Z",
+    "changeDate": "2017-11-30T00:01:51.263Z",
+    "note": "",
+    "combinedId": "16715615216A0ED8D8C3FD14CFDE723BB1B2C554A3FD9B0DCD828EE55AC0ADF461EB3A7A019A831ED0AEFA3B45FC91A9",
+    "route": {
+      "country": "RUS",
+      "distance": 1253,
+      "distanceText": "1253 км",
+      "distanceLink": "http://ati.su/Trace/Default.aspx?EntityType=Load&FerriesTry=1&Cities=1_2545;2_190;&LargeCities=true",
+      "distanceTooltip": "посмотреть маршрут Кыштым - Пенза",
+      "totalDistance": 0
+    },
+    "truck": {
+      "carTypes": [1],
+      "carTypesBitSum": 1,
+      "loadingTypes": [2],
+      "unloadingTypes": [2],
+      "loadingLogicalOperator": 1,
+      "unloadingLogicalOperator": 1,
+      "tir": false,
+      "cmr": false,
+      "t1": false,
+      "sanPassport": false,
+      "quantity": 1,
+      "beltCount": 0,
+      "scepka": false,
+      "pnevmohod": false,
+      "koniki": false
+    },
+    "load": {
+      "weight": 1.5,
+      "volume": 9.9,
+      "length": 3.0,
+      "height": 1.5,
+      "width": 2.2,
+      "lengthHighlight": false,
+      "heightHighlight": false,
+      "widthHighlight": false,
+      "packType": 8,
+      "palletCount": 0,
+      "dogruz": false,
+      "dogruzPossible": true,
+      "onlyToSeparateCar": false,
+      "sborGruz": false,
+      "cargoType": "ТНП",
+      "adr": 0
+    },
+    "loading": {
+      "location": {
+        "city": "Кыштым",
+        "region": "Челябинская область",
+        "lat": 0.0,
+        "lon": 0.0,
+        "geoCode": "2_2545",
+        "fullGeoName": "Кыштым, Челябинская область, Россия"
+      },
+      "firstDate": "2017-12-03T21:00:00Z",
+      "lastDate": "2017-12-03T21:00:00Z",
+      "periodicity": "",
+      "periodicityId": 0,
+      "dateType": 1,
+      "time": "",
+      "ready": false
+    },
+    "unloading": {
+      "location": {
+        "city": "Пенза",
+        "region": "",
+        "lat": 0.0,
+        "lon": 0.0,
+        "geoCode": "2_190",
+        "fullGeoName": "Пенза, Пензенская область, Россия",
+        "customs": ""
+      },
+      "firstDate": "0001-01-01T00:00:00",
+      "lastDate": "0001-01-01T00:00:00",
+      "periodicityId": 0,
+      "dateType": 0,
+      "time": "",
+      "ready": false
+    },
+    "rate": {
+      "rateType": 0,
+      "moneyType": 22,
+      "price": 15000.0000,
+      "priceNds": 0.0000,
+      "priceNoNds": 0.0000,
+      "rateModifier": 1,
+      "currency": 1,
+      "currencyIdPerKm": 8,
+      "prepay": 0,
+      "payDays": 0,
+      "payOnUnload": false,
+      "negotiation": false,
+      "direct": false,
+      "noLoad": false
+    },
+    "konturFocusLamp": {
+      "isHidden": false,
+      "lampColor": "light-multicolor",
+      "tooltipText": "Об этой или связанных с ней фирмах найдены факты. Рекомендуем ознакомиться с ними перед началом сотрудничества"
+    },
+    "request": {
+      "ownerPrice": "",
+      "counterOffer": {
+        "text": "<b>Отправить встречное предложение</b><br/>Нет встречных предложений",
+        "textOffer": "Отправить предложение",
+        "statusOffer": 5,
+        "isHighlightColor": false,
+        "offerCount": 0
+      },
+      "truePrice": {
+        "isMyTruePrice": false
+      },
+      "absenceClaimed": false,
+      "hasMyComplaint": false,
+      "isOfferAvailable": false
+    },
+    "firm": {
+      "id": "1488971",
+      "brand": "",
+      "name": "ТРАНСПОРТНОЕ БЮРО, ООО",
+      "firmFullName": "ТРАНСПОРТНОЕ БЮРО, ООО",
+      "comment": "",
+      "profile": "эксп.",
+      "city": "Самара",
+      "isDeleted": false,
+      "rating": {
+        "firmId": 1488971,
+        "displayId": "1488971",
+        "status": 1,
+        "vip": false,
+        "score": 2.6,
+        "description": "Балл участника АТИ: 2.6. Нет красныхбаллов, количество рекомендаций больше 2-х и есть балл за соответствие названия",
+        "showPassport": true,
+        "scorePercent": 52,
+        "fakePassport": false,
+        "konturFocusLamp": {
+          "isHidden": false,
+          "lampColor": "light-multicolor",
+          "tooltipText": "Об этой или связанных с ней фирмах найдены факты. Рекомендуем ознакомиться с ними перед началом сотрудничества"
+        },
+        "topRating": {
+          "cityRating": {
+            "position": 333,
+            "ratingType": "Dispatcher ",
+            "tooltip": "<div><span class='rating-tooltip-header'>Место из 431 среди участников с профилем Экспедитор и Диспетчер на 30 ноября 2017</span><span class='rating-tooltip-body'></span></div>",
+            "hasRating": false,
+            "recalculatedStatus": "",
+            "ratingUrl": "http://ati.su/rating?geo=2_220&firmTypes=2,4,5"
+          },
+          "countryRating": {
+            "position": 16260,
+            "ratingType": "Dispatcher ",
+            "tooltip": "<div><span class='rating-tooltip-header'>Место из 21115 среди участников с профилем Экспедитор и ��испетчер на 30 ноября 2017.</span><span class='rating-tooltip-body'></span></div>",
+            "hasRating": false,
+            "recalculatedStatus": "",
+            "ratingUrl": "http://ati.su/rating?geo=0_1&firmTypes=2,4,5"
+          }
+        }
+      },
+      "pointsDescription": {
+        "sumPoint": 2.6,
+        "points": [{
+          "key": "Данные фирмы в АТИ (название, город) совпадают с настоящими данными фирмы.",
+          "value": 1.0
+        }, {
+          "key": "За давность регистрации в АвтоТрансИнфо",
+          "value": 0.1
+        }, {
+          "key": "За время существования юридического лица или индивидуального предпринимателя",
+          "value": 0.2
+        }, {
+          "key": "Свидетельство ведения фирмой текущей хозяйственной деятельности.",
+          "value": 0.5
+        }, {
+          "key": "За проф. деятельность в АТИ.",
+          "value": 0.8
+        }
+        ]
+      },
+      "ourTribunal": false,
+      "vtsTrucks": [],
+      "recommendations": 320,
+      "claims": 0,
+      "unfairPartner": 0,
+      "associations": [],
+      "contacts": [{
+        "id": 36,
+        "email": true,
+        "skype": "live:tb.benz",
+        "icq": "657888582",
+        "city": "",
+        "phones": [{
+          "brandName": "",
+          "region": "г. Тольятти|Самарская обл.",
+          "number": "+7(8482)650430 (доб.105)"
+        }, {
+          "brandPicture": "mo_megafon.png",
+          "brandName": "МегаФон",
+          "region": "Самарская обл.",
+          "number": "+7(929)7128145"
+        }
+        ],
+        "name": "Бенц Анна"
+      }, {
+        "id": 42,
+        "email": false,
+        "skype": "",
+        "icq": "",
+        "city": "",
+        "phones": [{
+          "brandName": "Ростелеком",
+          "region": "Российская Федерация",
+          "number":
+          "+7(800)7075594"
+        }
+        ],
+        "name": "Бесплатный Единый"
+      }
+      ],
+      "isActiveUserAtiDoc": false
+    },
+    "showMsgToUnregistered": true,
+    "showFirmToUnregistered": false,
+    "isHidden": false,
+    "krugoreis": false,
+    "boards": [],
+    "apiClient": {
+      "appId": ""
+    },
+    "deal": {
+      "dealType": 0,
+      "dealStatus": 0
+    },
+    "mayTaken": false
+  }, {
+    "id": "65c56f0f-ee9d-4c2a-8bc0-08e54245761d",
+    "addDate": "2017-11-29T05:59:19.213Z",
+    "changeDate": "2017-11-30T00:01:36.197Z",
+    "note": "",
+    "combinedId": "336BCA9740A8A505C5FD719C54205578D02C6B8E8F32182486C4EC6B58BDC5CC77414A24DE9B9E355DD95061B8E04693",
+    "route": {
+      "country": "RUS",
+      "distance": 0,
+      "distanceText": "",
+      "totalDistance": 0
+    },
+    "truck": {
+      "carTypes": [8388608],
+      "carTypesBitSum": 8388608,
+      "loadingTypes": [1],
+      "unloadingTypes": [1],
+      "loadingLogicalOperator": 1,
+      "unloadingLogicalOperator": 1,
+      "tir": false,
+      "cmr": false,
+      "t1": false,
+      "sanPassport": false,
+      "quantity": 1,
+      "beltCount": 0,
+      "scepka": false,
+      "pnevmohod": false,
+      "koniki": false
+    },
+    "load": {
+      "weight": 5.0,
+      "volume": 37.5,
+      "length": 6.0,
+      "height": 2.5,
+      "width": 2.5,
+      "lengthHighlight": false,
+      "heightHighlight": false,
+      "widthHighlight": false,
+      "packType": 0,
+      "palletCount": 0,
+      "dogruz": false,
+      "dogruzPossible": false,
+      "onlyToSeparateCar": true,
+      "sborGruz": false,
+      "cargoType": "ТНП",
+      "adr": 0
+    },
+    "loading": {
+      "location": {
+        "city": "Уяр",
+        "region": "Красноярский край",
+        "street": "Позже",
+        "lat": 0.0,
+        "lon": 0.0,
+        "geoCode": "2_7701",
+        "fullGeoName": "Уяр, Красноярский край, Россия"
+      },
+      "firstDate": "2017-11-30T00:01:36.197Z",
+      "lastDate": "2017-11-30T00:01:36.197Z",
+      "periodicity": "",
+      "periodicityId": 0,
+      "dateType": 1,
+      "time": "",
+      "ready": false
+    },
+    "unloading": {
+      "location": {
+        "city": "Уяр",
+        "region": "Красноярский край",
+        "street": "Позже",
+        "lat": 0.0,
+        "lon": 0.0,
+        "geoCode": "2_7701",
+        "fullGeoName": "Уяр, Красноярский край, Россия",
+        "customs": ""
+      },
+      "firstDate": "0001-01-01T00:00:00",
+      "lastDate": "0001-01-01T00:00:00",
+      "periodicityId": 0,
+      "dateType": 0,
+      "time": "",
+      "ready": false
+    },
+    "rate": {
+      "rateType": 0,
+      "moneyType": 22,
+      "price": 8000.0000,
+      "priceNds": 0.0000,
+      "priceNoNds": 0.0000,
+      "rateModifier": 1,
+      "currency": 1,
+      "currencyIdPerKm": 8,
+      "prepay": 0,
+      "payDays": 0,
+      "payOnUnload": false,
+      "negotiation": false,
+      "direct": false,
+      "noLoad": false
+    },
+    "konturFocusLamp": {
+      "isHidden": false,
+      "lampColor": "light-multicolor",
+      "tooltipText": "Об этой или связанных с ней фирмах найдены факты. Рекомендуем ознакомиться с ними перед на��алом сотрудничества"
+    },
+    "request": {
+      "ownerPrice": "",
+      "counterOffer": {
+        "text": "<b>Отправить встречное предложение</b><br/>Нет встречных предложений",
+        "textOffer": "Отправить предложение",
+        "statusOffer": 5,
+        "isHighlightColor": false,
+        "offerCount": 0
+      },
+      "truePrice": {
+        "isMyTruePrice": false
+      },
+      "absenceClaimed": false,
+      "hasMyComplaint": false,
+      "isOfferAvailable": false
+    },
+    "firm": {
+      "id": "1520357",
+      "brand": "КОМПАНИЯ ФТК",
+      "name": "КОМПАНИЯ ФТК, ООО",
+      "firmFullName": "КОМПАНИЯ ФТК, ООО",
+      "comment": "",
+      "profile": "эксп.",
+      "city": "Самара",
+      "isDeleted": false,
+      "rating": {
+        "firmId": 1520357,
+        "displayId": "1520357",
+        "status": 1,
+        "vip": false,
+        "score": 2.7,
+        "description": "Балл участника АТИ: 2.7. Нет красных баллов, количество рекомендаций больше 2-х и есть балл за соответствие названия",
+        "showPassport": true,
+        "scorePercent": 52,
+        "fakePassport": false,
+        "konturFocusLamp": {
+          "isHidden": false,
+          "lampColor": "light-multicolor",
+          "tooltipText": "Об этой или связанных с ней фирмах найдены факты. Рекомендуем ознакомиться с ними перед началом сотрудничества"
+        },
+        "topRating": {
+          "cityRating": {
+            "position": 325,
+            "ratingType": "Dispatcher ",
+            "tooltip": "<div><span class='rating-tooltip-header'>Место из 431 среди участников с профилем Экспедитор и Диспетчер на 30 ноября 2017</span><span class='rating-tooltip-body'></span></div>",
+            "hasRating": false,
+            "recalculatedStatus": "",
+            "ratingUrl": "http://ati.su/rating?geo=2_220&firmTypes=2,4,5"
+          },
+          "countryRating": {
+            "position": 15989,
+            "ratingType": "Dispatcher ",
+            "tooltip": "<div><span class='rating-tooltip-header'>Место из 21115 среди участников с профилем Экспедитор и Диспетчер на 30 ноября 2017.</span><span class='rating-tooltip-body'></span></div>",
+            "hasRating": false,
+            "recalculatedStatus": "",
+            "ratingUrl": "http://ati.su/rating?geo=0_1&firmTypes=2,4,5"
+          }
+        }
+      },
+      "pointsDescription": {
+        "sumPoint": 2.7,
+        "points": [{
+          "key": "Данные фирмы в АТИ (название, город) совпадают с настоящими данными фирмы.",
+          "value": 1.0
+        }, {
+          "key": "За давность регистрации в АвтоТрансИнфо",
+          "value": 0.1
+        }, {
+          "key": "За время существования юридического лица или индивидуального предпринимателя",
+          "value": 0.2
+        }, {
+          "key": "Свидетельство ведения фирмой текущей хозяйственной деятельности.",
+          "value": 0.5
+        }, {
+          "key": "За проф. деятельность в АТИ.",
+          "value": 0.9
+        }
+        ]
+      },
+      "ourTribunal": false,
+      "vtsTrucks": [],
+      "recommendations": 267,
+      "claims": 0,
+      "unfairPartner": 0,
+      "associations": [],
+      "contacts": [{
+        "id": 14,
+        "email": true,
+        "skype": "",
+        "icq": "721649733",
+        "city": "",
+        "phones": [{
+          "brandName": "",
+          "region": "г. Тольятти|Самарская обл.",
+          "number": "+7(8482)650224 (доб.50)"
+        }, {
+          "brandPicture": "mo_beeline.png",
+          "brandName": "Билайн",
+          "region": "Самарская обл.",
+          "number": "+7(962)6139033"
+        }
+        ],
+        "name": "Наталья К."
+      }, {
+        "id": 26,
+        "email": false,
+        "skype": "",
+        "icq": "",
+        "city": "",
+        "phones": [{
+          "brandName": "Ростелеком",
+          "region": "Российская Федерация",
+          "number": "+7(800)7070462"
+        }
+        ],
+        "name": "Бесплатный номер"
+      }
+      ],
+      "isActiveUserAtiDoc": false
+    },
+    "showMsgToUnregistered": true,
+    "showFirmToUnregistered": false,
+    "isHidden": false,
+    "krugoreis": false,
+    "boards": [],
+    "apiClient": {
+      "appId": ""
+    },
+    "deal": {
+      "dealType": 0,
+      "dealStatus": 0
+    },
+    "mayTaken"
+    : false
+  }, {
+    "id": "fc3f32b5-405a-4f9c-95fe-dc5739da73b4",
+    "addDate": "2017-11-24T05:07:06.387Z",
+    "changeDate": "2017-11-30T00:01:36.12Z",
+    "note": "",
+    "combinedId": "65CCF26E64E36B8EA009E98A8064515ECFA3AD1418BDA91B9ACDD4955CA9F05CF41F4F15E30FD274647A91BBFD23B196",
+    "route": {
+      "country": "RUS",
+      "distance": 608,
+      "distanceText": "608 км",
+      "distanceLink": "http://ati.su/Trace/Default.aspx?EntityType=Load&FerriesTry=1&Cities=1_110;2_89;&LargeCities=true",
+      "distanceTooltip": "посмотреть маршрут Кострома - Киров",
+      "totalDistance": 0
+    },
+    "truck": {
+      "carTypes": [1, 128],
+      "carTypesBitSum": 129,
+      "loadingTypes": [1, 2],
+      "unloadingTypes": [1, 2],
+      "loadingLogicalOperator": 1,
+      "unloadingLogicalOperator": 1,
+      "tir": false,
+      "cmr": false,
+      "t1": false,
+      "sanPassport": false,
+      "quantity": 1,
+      "beltCount": 6,
+      "scepka": false,
+      "pnevmohod": false,
+      "koniki": false
+    },
+    "load": {
+      "weight": 10.0,
+      "volume": 21.0,
+      "length": 12.0,
+      "height": 1.4,
+      "width": 1.25,
+      "lengthHighlight": false,
+      "heightHighlight": false,
+      "widthHighlight": false,
+      "packType": 5,
+      "palletCount": 6,
+      "dogruz": false,
+      "dogruzPossible": false,
+      "onlyToSeparateCar": true,
+      "sborGruz": false,
+      "cargoType": "ТНП",
+      "adr": 0
+    },
+    "loading": {
+      "location": {
+        "city": "Кострома",
+        "region": "",
+        "lat": 0.0,
+        "lon": 0.0,
+        "geoCode": "2_110",
+        "fullGeoName": "Кострома, Костромская область, Россия"
+      },
+      "firstDate": "2017-11-30T00:01:36.12Z",
+      "lastDate": "2017-12-02T00:01:36.12Z",
+      "periodicity": "",
+      "periodicityId": 0,
+      "dateType": 1,
+      "time": "",
+      "ready": true
+    },
+    "unloading": {
+      "location": {
+        "city": "Киров",
+        "region": "Кировская область",
+        "lat": 0.0,
+        "lon": 0.0,
+        "geoCode": "2_89",
+        "fullGeoName": "Киров, Кировская область, Россия",
+        "customs": ""
+      },
+      "firstDate": "0001-01-01T00:00:00",
+      "lastDate": "0001-01-01T00:00:00",
+      "periodicityId": 0,
+      "dateType": 0,
+      "time": "",
+      "ready": false
+    },
+    "rate": {
+      "rateType": 0,
+      "moneyType": 22,
+      "price": 26000.0000,
+      "priceNds": 0.0000,
+      "priceNoNds": 0.0000,
+      "rateModifier": 1,
+      "currency": 1,
+      "currencyIdPerKm": 8,
+      "prepay": 0,
+      "payDays": 0,
+      "payOnUnload": false,
+      "negotiation": false,
+      "direct": false,
+      "noLoad": false
+    },
+    "konturFocusLamp": {
+      "isHidden": false,
+      "lampColor": "light-multicolor",
+      "tooltipText": "Об этой или связанных с ней фирмах найдены факты. Рекомендуем ознакомиться сними перед началом сотрудничества"
+    },
+    "request": {
+      "ownerPrice": "",
+      "counterOffer": {
+        "text": "<b>Отправить встречное предложение</b><br/>Нет встречных предложений",
+        "textOffer": "Отправить предложение",
+        "statusOffer": 5,
+        "isHighlightColor": false,
+        "offerCount": 0
+      },
+      "truePrice": {
+        "isMyTruePrice": false
+      },
+      "absenceClaimed": false,
+      "hasMyComplaint": false,
+      "isOfferAvailable": false
+    },
+    "firm": {
+      "id": "1473763",
+      "brand": "",
+      "name": "МАЙВЭЙ ТК, ООО",
+      "firmFullName": "МАЙВЭЙ ТК, ООО",
+      "comment": "",
+      "profile": "эксп.",
+      "city": "Тольятти",
+      "isDeleted": false,
+      "rating": {
+        "firmId": 1473763,
+        "displayId": "1473763",
+        "status": 1,
+        "vip": false,
+        "score": 3.2,
+        "description": "Балл участника АТИ: 3.2. Нет красных баллов, количество рекомендаций больше 2-х и есть балл за соответствие названия",
+        "showPassport": true,
+        "scorePercent": 68,
+        "fakePassport": false,
+        "konturFocusLamp": {
+          "isHidden": false,
+          "lampColor": "light-multicolor",
+          "tooltipText": "Об этой или связанных с ней фирмах найдены факты. Рекомендуем ознакомиться с ними перед началом сотрудничества"
+        },
+        "topRating": {
+          "cityRating": {
+            "position"
+            : 206,
+            "ratingType": "Dispatcher ",
+            "tooltip": "<div><span class='rating-tooltip-header'>Место из 317 среди участников с профилем Экспедитор и Диспетчер на 30 ноября 2017</span><span class='rating-tooltip-body'></span></div>",
+            "hasRating": false,
+            "recalculatedStatus": "",
+            "ratingUrl": "http://ati.su/rating?geo=2_253&firmTypes=2,4,5"
+          },
+          "countryRating": {
+            "position": 14723,
+            "ratingType": "Dispatcher ",
+            "tooltip": "<div><span class='rating-tooltip-header'>Место из 21115 среди участников с профилем Экспедитор и Диспетчер на 30 ноября 2017.</span><span class='rating-tooltip-body'></span></div>",
+            "hasRating": false,
+            "recalculatedStatus": "",
+            "ratingUrl": "http://ati.su/rating?geo=0_1&firmTypes=2,4,5"
+          }
+        }
+      },
+      "pointsDescription": {
+        "sumPoint": 3.2,
+        "points": [{
+          "key": "Данные фирмы в АТИ (название, город) совпадают с настоящими данными фирмы.",
+          "value": 1.0
+        }, {
+          "key": "За давность регистрации в АвтоТрансИнфо",
+          "value": 0.1
+        }, {
+          "key": "За время существования юридического лица или индивидуального предпринимателя",
+          "value": 0.8
+        }, {
+          "key": "Свидетельство ведения фирмой текущей хозяйственной деятельности.",
+          "value": 0.5
+        }, {
+          "key": "За проф. деятельность в АТИ.",
+          "value": 0.8
+        }
+        ]
+      },
+      "ourTribunal": false,
+      "vtsTrucks": [],
+      "recommendations": 222,
+      "claims": 0,
+      "unfairPartner": 0,
+      "associations": [],
+      "contacts": [{
+        "id": 24,
+        "email": true,
+        "skype": "",
+        "icq": "729185519",
+        "city": "",
+        "phones": [{
+          "brandName": "",
+          "region": "Российская Федерация",
+          "number": "+7(800)5551709 (доб.127)"
+        }, {
+          "brandPicture": "mo_beeline.png",
+          "brandName": "Билайн",
+          "region": "Самарская обл.",
+          "number": "+7(962)6137128"
+        }
+        ],
+        "name": "Александра"
+      }, {
+        "id": 30,
+        "email": false,
+        "skype": "",
+        "icq": "",
+        "city": "",
+        "phones": [{
+          "brandName": "",
+          "region": "Российская Федерация",
+          "number": "+7(800)5551709"
+        }
+        ],
+        "name": "Бесплатный номер"
+      }
+      ],
+      "isActiveUserAtiDoc": false
+    },
+    "showMsgToUnregistered": true,
+    "showFirmToUnregistered": false,
+    "isHidden": false,
+    "krugoreis": false,
+    "boards": [],
+    "apiClient": {
+      "appId": ""
+    },
+    "deal": {
+      "dealType": 0,
+      "dealStatus": 0
+    },
+    "mayTaken": false
+  }, {
+    "id": "56afbb80-c225-434a-97ed-faa0461ff350",
+    "addDate": "2017-11-29T12:39:01.06Z",
+    "changeDate": "2017-11-30T00:01:27.043Z",
+    "note": "",
+    "combinedId": "4B10B18C3834B736DA217C31065E0298485333A7C6C79967B41808D0698B1876D86CEE0B7A30B33E0773D05803951176",
+    "route": {
+      "country": "RUS",
+      "distance": 576,
+      "distanceText": "576 км",
+      "distanceLink": "http://ati.su/Trace/Default.aspx?EntityType=Load&FerriesTry=1&Cities=1_1157;2_283;&LargeCities=true",
+      "distanceTooltip": "посмотреть маршрут Муром - Ульяновск",
+      "totalDistance": 0
+    },
+    "truck": {
+      "carTypes": [1, 128, 1024, 4096, 8192, 70368744177664],
+      "carTypesBitSum": 70368744191105,
+      "loadingTypes": [1],
+      "unloadingTypes": [1],
+      "loadingLogicalOperator": 1,
+      "unloadingLogicalOperator": 1,
+      "tir": false,
+      "cmr": false,
+      "t1": false,
+      "sanPassport": false,
+      "quantity": 1,
+      "beltCount": 0,
+      "scepka": false,
+      "pnevmohod": false,
+      "koniki": false
+    },
+    "load": {
+      "weight": 20.8,
+      "volume": 40.0,
+      "length": 10.0,
+      "height": 2.0,
+      "width": 2.0,
+      "lengthHighlight": false,
+      "heightHighlight": false,
+      "widthHighlight": false,
+      "packType": 4,
+      "palletCount": 0,
+      "dogruz": false,
+      "dogruzPossible": false,
+      "onlyToSeparateCar": true,
+      "sborGruz": false,
+      "cargoType": "Изделия из металла",
+      "adr": 0
+    },
+    "loading": {
+      "location": {
+        "city": "Муром",
+        "region": "Владимирская область",
+        "lat": 0.0,
+        "lon": 0.0,
+        "geoCode": "2_1157",
+        "fullGeoName": "Муром, Владимирская область, Россия"
+      },
+      "firstDate": "2017-11-30T00:01:27.043Z",
+      "lastDate": "2017-12-04T00:01:27.043Z",
+      "periodicity": "",
+      "periodicityId": 0,
+      "dateType": 1,
+      "time": "",
+      "ready": true
+    },
+    "unloading": {
+      "location": {
+        "city": "Ульяновск",
+        "region": "",
+        "lat": 0.0,
+        "lon": 0.0,
+        "geoCode": "2_283",
+        "fullGeoName": "Ульяновск, Ульяновская область, Россия",
+        "customs": ""
+      },
+      "firstDate": "0001-01-01T00:00:00",
+      "lastDate": "0001-01-01T00:00:00",
+      "periodicityId": 0,
+      "dateType": 0,
+      "time": "",
+      "ready": false
+    },
+    "rate": {
+      "rateType": 0,
+      "moneyType": 22,
+      "price": 33000.0000,
+      "priceNds": 0.0000,
+      "priceNoNds": 0.0000,
+      "rateModifier": 1,
+      "currency": 1,
+      "currencyIdPerKm": 8,
+      "prepay": 0,
+      "payDays": 0,
+      "payOnUnload": false,
+      "negotiation": false,
+      "direct": false,
+      "noLoad": false
+    },
+    "konturFocusLamp": {
+      "isHidden": true,
+      "lampColor": "light-hidden"
+    },
+    "request": {
+      "ownerPrice": "",
+      "counterOffer": {
+        "text": "<b>Отправить встречное предложение</b><br/>Нет встречных предложений",
+        "textOffer": "Отправить предложение",
+        "statusOffer": 5,
+        "isHighlightColor": false,
+        "offerCount": 0
+      },
+      "truePrice": {
+        "isMyTruePrice": false
+      },
+      "absenceClaimed": false,
+      "hasMyComplaint": false,
+      "isOfferAvailable": false
+    },
+    "firm": {
+      "id": "1721930",
+      "brand": "",
+      "name": "\"АССОЦИАЦИЯ ДИСПЕТЧЕРОВ\", ООО",
+      "firmFullName": "\"АССОЦИАЦИЯ ДИСПЕТЧЕРОВ\", ООО",
+      "comment": "",
+      "profile": "дисп.",
+      "city": "Тольятти",
+      "isDeleted": false,
+      "rating": {
+        "firmId": 1721930,
+        "displayId": "1721930",
+        "status": 1,
+        "vip": false,
+        "score": 3.6,
+        "description": "Балл участника АТИ: 3.6. Нет красных баллов, количество рекомендаций больше 2-х и есть балл за соответствие названия",
+        "showPassport": true,
+        "scorePercent": 72,
+        "fakePassport": false,
+        "konturFocusLamp": {
+          "isHidden": true,
+          "lampColor": "light-hidden"
+        },
+        "topRating": {
+          "cityRating": {
+            "position": 182,
+            "ratingType": "Dispatcher ",
+            "tooltip": "<div><span class='rating-tooltip-header'>Место из 317 среди участников с профилем Экспедитор и Диспетчер на 30 ноября 2017</span><span class='rating-tooltip-body'></span></div>",
+            "hasRating": false,
+            "recalculatedStatus": "",
+            "ratingUrl": "http://ati.su/rating?geo=2_253&firmTypes=2,4,5"
+          },
+          "countryRating": {
+            "position": 13622,
+            "ratingType": "Dispatcher ",
+            "tooltip": "<div><span class='rating-tooltip-header'>Место из 21115 среди участников с профилем Экспедитор и Диспетчер на 30 ноября 2017.</span><span class='rating-tooltip-body'></span></div>",
+            "hasRating": false,
+            "recalculatedStatus": "",
+            "ratingUrl": "http://ati.su/rating?geo=0_1&firmTypes=2,4,5"
+          }
+        }
+      },
+      "pointsDescription": {
+        "sumPoint": 3.6,
+        "points": [{
+          "key": "Данные фирмы в АТИ (название, город) совпадают с настоящими данными фирмы.",
+          "value": 1.0
+        }, {
+          "key": "За давность регистрации в АвтоТрансИнфо",
+          "value": 0.2
+        }, {
+          "key": "За время существования юридического лица или индивидуального предпринимателя",
+          "value": 0.4
+        }, {
+          "key": "Свидетельство ведения фирмой текущей хозяйственной деятельности.",
+          "value": 0.5
+        }, {
+          "key": "За проф. деятельность в АТИ.",
+          "value": 1.5
+        }
+        ]
+      },
+      "ourTribunal": false,
+      "vtsTrucks": [],
+      "recommendations": 95,
+      "claims": 0,
+      "unfairPartner": 0,
+      "docs": "Представлено 14 документов",
+      "associations": [],
+      "contacts": [{
+        "id": 56,
+        "email": true,
+        "skype": "eranina.asd",
+        "icq": "712763707",
+        "city": "",
+        "phones": [{
+          "brandName": "",
+          "region": "г. Тольятти|Самарская обл.",
+          "number": "+7(8482)650169 (доб.29)"
+        }, {
+          "brandPicture": "mo_megafon.png",
+          "brandName": "МегаФон",
+          "region": "Самарская обл.",
+          "number": "+7(927)7571031"
+        }
+        ],
+        "name": "Еранина Анжелика"
+      }, {
+        "id": 22,
+        "email": true,
+        "skype": "",
+        "icq": "",
+        "city": "",
+        "phones": [{
+          "brandName": "МегаФон",
+          "region": "Российская Федерация",
+          "number": "+7(800)2229019"
+        }, {
+          "brandPicture": "mo_megafon.png",
+          "brandName": "МегаФон",
+          "region": "Российская Федерация",
+          "number": "+7(800)2229019"
+        }
+        ],
+        "name": "Бесплатный звонок"
+      }
+      ],
+      "isActiveUserAtiDoc": false
+    },
+    "showMsgToUnregistered": true,
+    "showFirmToUnregistered": false,
+    "isHidden": false,
+    "krugoreis": false,
+    "boards": [],
+    "apiClient": {
+      "appId": ""
+    },
+    "deal": {
+      "dealType": 0,
+      "dealStatus": 0
+    },
+    "mayTaken": false
+  }, {
+    "id": "d10c314a-91d7-409b-9d1d-6ccfb9265204",
+    "addDate": "2017-11-29T10:34:35.143Z",
+    "changeDate": "2017-11-30T00:01:26.943Z",
+    "note": "",
+    "combinedId": "5646949F3D26F71FDCA2C1D3B36C78FB6296A9673656FC8A174625B0F4660EB82B581904D31B235F9453F986B3A83349",
+    "route": {
+      "country": "RUS",
+      "distance": 967,
+      "distanceText": "967 км",
+      "distanceLink": "http://ati.su/Trace/Default.aspx?EntityType=Load&FerriesTry=1&Cities=1_80;2_1236;&LargeCities=true",
+      "distanceTooltip": "посмотреть маршрут Казань - Малоярославец",
+      "totalDistance": 0
+    },
+    "truck": {
+      "carTypes": [1, 2, 8, 16, 64],
+      "carTypesBitSum": 91,
+      "loadingTypes": [4],
+      "unloadingTypes": [4],
+      "loadingLogicalOperator": 1,
+      "unloadingLogicalOperator": 1,
+      "tir": false,
+      "cmr": false,
+      "t1": false,
+      "sanPassport": false,
+      "quantity": 1,
+      "beltCount": 0,
+      "scepka": false,
+      "pnevmohod": false,
+      "koniki": false
+    },
+    "load": {
+      "weight": 20.0,
+      "volume": 82.0,
+      "length": 13.6,
+      "height": 2.45,
+      "width": 2.45,
+      "lengthHighlight": false,
+      "heightHighlight": false,
+      "widthHighlight": false,
+      "packType": 5,
+      "palletCount": 0,
+      "dogruz": false,
+      "dogruzPossible": false,
+      "onlyToSeparateCar": true,
+      "sborGruz": false,
+      "cargoType": "ТНП",
+      "adr": 0
+    },
+    "loading": {
+      "location": {
+        "city": "Казань",
+        "region": "",
+        "lat": 0.0,
+        "lon": 0.0,
+        "geoCode": "2_80",
+        "fullGeoName": "Казань, Татарстан республика, Россия"
+      },
+      "firstDate": "2017-11-30T00:01:26.943Z",
+      "lastDate": "2017-12-01T00:01:26.943Z",
+      "periodicity": "",
+      "periodicityId": 0,
+      "dateType": 1,
+      "time": "",
+      "ready": true
+    },
+    "unloading": {
+      "location": {
+        "city": "Малоярославец",
+        "region": "Калужская область",
+        "lat": 0.0,
+        "lon": 0.0,
+        "geoCode": "2_1236",
+        "fullGeoName": "Малоярославец, Калужская область, Россия",
+        "customs": ""
+      },
+      "firstDate": "0001-01-01T00:00:00",
+      "lastDate": "0001-01-01T00:00:00",
+      "periodicityId": 0,
+      "dateType": 0,
+      "time": "",
+      "ready": false
+    },
+    "rate": {
+      "rateType": 0,
+      "moneyType": 22,
+      "price": 26000.0000,
+      "priceNds": 0.0000,
+      "priceNoNds": 0.0000,
+      "rateModifier": 1,
+      "currency": 1,
+      "currencyIdPerKm": 8,
+      "prepay": 0,
+      "payDays": 0,
+      "payOnUnload": false,
+      "negotiation": false,
+      "direct": false,
+      "noLoad": false
+    },
+    "konturFocusLamp": {
+      "isHidden": true,
+      "lampColor": "light-hidden"
+    },
+    "request": {
+      "ownerPrice": "",
+      "counterOffer": {
+        "text": "<b>Отправить встречное предложение</b><br/>Нет встречных предложений",
+        "textOffer": "Отправить предложение",
+        "statusOffer": 5,
+        "isHighlightColor": false,
+        "offerCount": 0
+      },
+      "truePrice": {
+        "isMyTruePrice": false
+      },
+      "absenceClaimed": false,
+      "hasMyComplaint": false,
+      "isOfferAvailable": false
+    },
+    "firm": {
+      "id": "1721930",
+      "brand": "",
+      "name": "\"АССОЦИАЦИЯ ДИСПЕТЧЕРОВ\", ООО",
+      "firmFullName": "\"АССОЦИАЦИЯ ДИСПЕТЧЕРОВ\", ООО",
+      "comment": "",
+      "profile": "дисп.",
+      "city": "Тольятти",
+      "isDeleted": false,
+      "rating": {
+        "firmId": 1721930,
+        "displayId": "1721930",
+        "status": 1,
+        "vip": false,
+        "score": 3.6,
+        "description": "Балл участника АТИ: 3.6. Нет красных баллов, количество рекомендаций больше 2-х и есть балл за соответствие названия",
+        "showPassport": true,
+        "scorePercent": 72,
+        "fakePassport": false,
+        "konturFocusLamp": {
+          "isHidden": true,
+          "lampColor": "light-hidden"
+        },
+        "topRating": {
+          "cityRating": {
+            "position": 182,
+            "ratingType": "Dispatcher ",
+            "tooltip": "<div><span class='rating-tooltip-header'>Место из 317 среди участников с профилем Экспедитор и Диспетчер на 30 ноября 2017</span><span class='rating-tooltip-body'></span></div>",
+            "hasRating": false,
+            "recalculatedStatus": "",
+            "ratingUrl": "http://ati.su/rating?geo=2_253&firmTypes=2,4,5"
+          },
+          "countryRating": {
+            "position": 13622,
+            "ratingType": "Dispatcher ",
+            "tooltip": "<div><span class='rating-tooltip-header'>Место из 21115 среди участников с профилем Экспедитор и Диспетчер на 30 ноября 2017.</span><span class='rating-tooltip-body'></span></div>",
+            "hasRating": false,
+            "recalculatedStatus": "",
+            "ratingUrl": "http://ati.su/rating?geo=0_1&firmTypes=2,4,5"
+          }
+        }
+      },
+      "pointsDescription": {
+        "sumPoint": 3.6,
+        "points": [{
+          "key": "Данные фирмы в АТИ (название, город) совпадают с настоящими данными фирмы.",
+          "value": 1.0
+        }, {
+          "key": "За давность регистрации в АвтоТрансИнфо",
+          "value": 0.2
+        }, {
+          "key": "За время существования юридического лица или индивидуального предпринимателя",
+          "value": 0.4
+        }, {
+          "key": "Свидетельство ведения фирмой текущей хозяйственной деятельности.",
+          "value": 0.5
+        }, {
+          "key": "За проф. деятельность в АТИ.",
+          "value": 1.5
+        }
+        ]
+      },
+      "ourTribunal": false,
+      "vtsTrucks": [],
+      "recommendations": 95,
+      "claims": 0,
+      "unfairPartner": 0,
+      "docs": "Представлено 14 документов",
+      "associations": [],
+      "contacts": [{
+        "id": 56,
+        "email": true,
+        "skype": "eranina.asd",
+        "icq": "712763707",
+        "city": "",
+        "phones": [{
+          "brandName": "",
+          "region": "г. Тольятти|Самарская обл.",
+          "number": "+7(8482)650169 (доб.29)"
+        }, {
+          "brandPicture": "mo_megafon.png",
+          "brandName": "МегаФон",
+          "re11-29 19:02:36.449 2863-2917/com.sobolgmail.i.stanislav.testati D/MyHTTP: gion": "Самарская обл.",
+          "number": "+7(927)7571031"
+        }
+        ],
+        "name": "Еранина Анжелика"
+      }, {
+        "id": 22,
+        "email": true,
+        "skype": "",
+        "icq": "",
+        "city": "",
+        "phones": [{
+          "brandName": "МегаФон",
+          "region": "Российская Федерация",
+          "number": "+7(800)2229019"
+        }, {
+          "brandPicture": "mo_megafon.png",
+          "brandName": "МегаФон",
+          "region": "Российская Федерация",
+          "number": "+7(800)2229019"
+        }
+        ],
+        "name": "Бесплатный звонок"
+      }
+      ],
+      "isActiveUserAtiDoc": false
+    },
+    "showMsgToUnregistered": true,
+    "showFirmToUnregistered": false,
+    "isHidden": false,
+    "krugoreis": false,
+    "boards": [],
+    "apiClient": {
+      "appId": ""
+    },
+    "deal": {
+      "dealType": 0,
+      "dealStatus": 0
+    },
+    "mayTaken": false
+  }
+  ],
+  "captchaStatus": 0,
+  "isUserAuthorized": false
+}

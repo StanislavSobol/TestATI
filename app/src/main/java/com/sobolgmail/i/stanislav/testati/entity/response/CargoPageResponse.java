@@ -1,4 +1,4 @@
-package com.sobolgmail.i.stanislav.testati.entity;
+package com.sobolgmail.i.stanislav.testati.entity.response;
 
 import com.google.gson.annotations.SerializedName;
 
@@ -12,7 +12,7 @@ import lombok.Getter;
  */
 
 @Getter
-public class CargoPageEntity {
+public class CargoPageResponse {
 
     @SerializedName("totalItems")
     private Integer totalItems;
@@ -35,6 +35,21 @@ public class CargoPageEntity {
         public static class MLoad {
             @SerializedName("cargoType")
             private String cargoType;
+        }
+
+        @SerializedName("loading")
+        private Loading loading;
+
+        @Getter
+        public static class Loading {
+            @SerializedName("location")
+            Location location;
+
+            @Getter
+            public static class Location {
+                @SerializedName("city")
+                String city;
+            }
         }
 
         @SerializedName("unloading")

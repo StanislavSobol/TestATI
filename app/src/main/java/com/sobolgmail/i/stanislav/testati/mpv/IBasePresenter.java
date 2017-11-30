@@ -12,4 +12,6 @@ public interface IBasePresenter<T extends IBaseView> {
     void unbind();
 
     void destroy();
+
+    void setChangingConfiguration(boolean value);
 }

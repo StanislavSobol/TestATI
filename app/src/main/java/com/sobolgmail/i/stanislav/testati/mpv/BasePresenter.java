@@ -2,6 +2,7 @@ package com.sobolgmail.i.stanislav.testati.mpv;
 
 import com.sobolgmail.i.stanislav.testati.utils.Logger;
 
+import lombok.Setter;
 import rx.subscriptions.CompositeSubscription;
 
 /**
@@ -9,16 +10,27 @@ import rx.subscriptions.CompositeSubscription;
  * stanislav.i.sobol@gmail.com
  */
 
-public class BasePresenter<T extends IBaseView> implements IBasePresenter {
+abstract public class BasePresenter<T extends IBaseView> implements IBasePresenter {
 
     protected CompositeSubscription compositeSubscription = new CompositeSubscription();
     private IBaseView iBaseView;
+    @Setter
+    private boolean changingConfiguration;
 
     @Override
     public void bind(IBaseView iBaseView) {
         this.iBaseView = iBaseView;
+        if (changingConfiguration) {
+            onBindWhenChangingConfiguration();
+        } else {
+            onBindWhenNotChangingConfiguration();
+        }
         Logger.write("bind");
     }
+
+    protected abstract void onBindWhenChangingConfiguration();
+
+    protected abstract void onBindWhenNotChangingConfiguration();
 
     @Override
     public void unbind() {

@@ -1,6 +1,7 @@
 package com.sobolgmail.i.stanislav.testati;
 
 import android.app.Application;
+import android.content.Context;
 
 import com.sobolgmail.i.stanislav.testati.di.DaggerComponents;
 import com.sobolgmail.i.stanislav.testati.di.DaggerDaggerComponents;
@@ -24,5 +25,9 @@ public class MApplication extends Application {
 
         dagger2Components =  DaggerDaggerComponents.builder().daggerModules(new DaggerModules()).build();
        // dagger2Components.inject(this);
+    }
+
+    public static Context getAppContext() {
+        return instance.getApplicationContext();
     }
 }

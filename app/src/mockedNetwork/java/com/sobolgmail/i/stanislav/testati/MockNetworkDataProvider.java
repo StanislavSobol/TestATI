@@ -1,22 +1,21 @@
-package com.sobolgmail.i.stanislav.testati.dataprovider.retrofit;
+package com.sobolgmail.i.stanislav.testati;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.sobolgmail.i.stanislav.testati.dataprovider.IDataProvider;
+import com.sobolgmail.i.stanislav.testati.dataprovider.retrofit.PostBody;
+import com.sobolgmail.i.stanislav.testati.dataprovider.retrofit.RetrofitAPIService;
 import com.sobolgmail.i.stanislav.testati.entity.CurrencyTypeEntity;
 import com.sobolgmail.i.stanislav.testati.entity.response.CargoPageResponse;
 import com.sobolgmail.i.stanislav.testati.entity.response.CurrencyTypeResponse;
 import com.sobolgmail.i.stanislav.testati.utils.Logger;
 import com.sobolgmail.i.stanislav.testati.utils.StringUtils;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
-import okhttp3.Response;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
@@ -26,11 +25,15 @@ import rx.functions.Func1;
 import rx.schedulers.Schedulers;
 
 /**
- * Created by Stanislav Sobol on 30.11.2017.
+ * Created by Stanislav Sobol on 29.11.2017.
  * stanislav.i.sobol@gmail.com
  */
 
-public class NetworkDataProvider implements IDataProvider {
+public class MockNetworkDataProvider implements IDataProvider {
+
+    private static final long NETWORK_TIMEOUT_MS = 60 * 1000;
+    private static final String CURRENCY_TYPES_URL = "http://api.ati.su/v1.0/";
+    private static final String CARGOS_URL = "http://loads.ati.su/api/";
 
     private Retrofit retrofit;
     private RetrofitAPIService currencyTypeService;
@@ -104,6 +107,7 @@ public class NetworkDataProvider implements IDataProvider {
                 .connectTimeout(NETWORK_TIMEOUT_MS, TimeUnit.MILLISECONDS)
                 .readTimeout(NETWORK_TIMEOUT_MS, TimeUnit.MILLISECONDS)
                 .addInterceptor(loggingInterceptor)
+                .addInterceptor(new MockInterceptor())
                 .build();
     }
 
@@ -111,4 +115,5 @@ public class NetworkDataProvider implements IDataProvider {
         final GsonBuilder gsonBuilder = new GsonBuilder();
         return gsonBuilder.create();
     }
+
 }

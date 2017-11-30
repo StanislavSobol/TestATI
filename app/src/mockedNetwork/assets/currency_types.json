@@ -1,0 +1,226 @@
+[
+  {
+    "Name": "kzt/км",
+    "NameEng": "kzt/km",
+    "Modifier": 1,
+    "CurrencyIdPerKm": null,
+    "Id": 24,
+    "Id2": "8528f49a-e0e6-e511-b00c-002590e45781"
+  },
+  {
+    "Name": "kzt/т.",
+    "NameEng": "kzt/ton",
+    "Modifier": 1,
+    "CurrencyIdPerKm": null,
+    "Id": 25,
+    "Id2": "8628f49a-e0e6-e511-b00c-002590e45781"
+  },
+  {
+    "Name": "лари",
+    "NameEng": "gel",
+    "Modifier": 1,
+    "CurrencyIdPerKm": 28,
+    "Id": 26,
+    "Id2": "08988ae9-1dcc-e611-a612-002590e45781"
+  },
+  {
+    "Name": "лари/т.",
+    "NameEng": "gel/ton",
+    "Modifier": 1,
+    "CurrencyIdPerKm": null,
+    "Id": 27,
+    "Id2": "72d1bc77-3fcc-e611-a612-002590e45781"
+  },
+  {
+    "Name": "лари/км",
+    "NameEng": "gel/km",
+    "Modifier": 1,
+    "CurrencyIdPerKm": null,
+    "Id": 28,
+    "Id2": "73d1bc77-3fcc-e611-a612-002590e45781"
+  },
+  {
+    "Name": "kgs",
+    "NameEng": "kgs",
+    "Modifier": 1,
+    "CurrencyIdPerKm": 31,
+    "Id": 29,
+    "Id2": "a15523ea-1a25-e711-89bb-00259038ec34"
+  },
+  {
+    "Name": "kgs/т.",
+    "NameEng": "kgs/ton",
+    "Modifier": 1,
+    "CurrencyIdPerKm": null,
+    "Id": 30,
+    "Id2": "a25523ea-1a25-e711-89bb-00259038ec34"
+  },
+  {
+    "Name": "kgs/км",
+    "NameEng": "kgs/km",
+    "Modifier": 1,
+    "CurrencyIdPerKm": null,
+    "Id": 31,
+    "Id2": "a35523ea-1a25-e711-89bb-00259038ec34"
+  },
+  {
+    "Name": "byn",
+    "NameEng": "byn",
+    "Modifier": 1,
+    "CurrencyIdPerKm": 34,
+    "Id": 32,
+    "Id2": "a45523ea-1a25-e711-89bb-00259038ec34"
+  },
+  {
+    "Name": "byn/т.",
+    "NameEng": "byn/ton",
+    "Modifier": 1,
+    "CurrencyIdPerKm": null,
+    "Id": 33,
+    "Id2": "a55523ea-1a25-e711-89bb-00259038ec34"
+  },
+  {
+    "Name": "byn/км",
+    "NameEng": "byn/km",
+    "Modifier": 1,
+    "CurrencyIdPerKm": null,
+    "Id": 34,
+    "Id2": "a65523ea-1a25-e711-89bb-00259038ec34"
+  },
+  {
+    "Name": "руб/т.",
+    "NameEng": "rub/ton",
+    "Modifier": 1,
+    "CurrencyIdPerKm": null,
+    "Id": 13,
+    "Id2": "9f9a7610-9712-e411-8e11-00259038ec34"
+  },
+  {
+    "Name": "тыс.руб",
+    "NameEng": "th.rub",
+    "Modifier": 1000,
+    "CurrencyIdPerKm": 8,
+    "Id": 12,
+    "Id2": "9e9a7610-9712-e411-8e11-00259038ec34"
+  },
+  {
+    "Name": "eur/км",
+    "NameEng": "eur/km",
+    "Modifier": 1,
+    "CurrencyIdPerKm": null,
+    "Id": 11,
+    "Id2": "9d9a7610-9712-e411-8e11-00259038ec34"
+  },
+  {
+    "Name": "грн/км",
+    "NameEng": "uah/km",
+    "Modifier": 1,
+    "CurrencyIdPerKm": null,
+    "Id": 10,
+    "Id2": "9c9a7610-9712-e411-8e11-00259038ec34"
+  },
+  {
+    "Name": "usd/км",
+    "NameEng": "usd/km",
+    "Modifier": 1,
+    "CurrencyIdPerKm": null,
+    "Id": 9,
+    "Id2": "9b9a7610-9712-e411-8e11-00259038ec34"
+  },
+  {
+    "Name": "руб/км",
+    "NameEng": "rub/km",
+    "Modifier": 1,
+    "CurrencyIdPerKm": null,
+    "Id": 8,
+    "Id2": "9a9a7610-9712-e411-8e11-00259038ec34"
+  },
+  {
+    "Name": "eur",
+    "NameEng": "eur",
+    "Modifier": 1,
+    "CurrencyIdPerKm": 11,
+    "Id": 3,
+    "Id2": "959a7610-9712-e411-8e11-00259038ec34"
+  },
+  {
+    "Name": "грн",
+    "NameEng": "uah",
+    "Modifier": 1,
+    "CurrencyIdPerKm": 10,
+    "Id": 5,
+    "Id2": "979a7610-9712-e411-8e11-00259038ec34"
+  },
+  {
+    "Name": "usd",
+    "NameEng": "usd",
+    "Modifier": 1,
+    "CurrencyIdPerKm": 9,
+    "Id": 2,
+    "Id2": "949a7610-9712-e411-8e11-00259038ec34"
+  },
+  {
+    "Name": "руб",
+    "NameEng": "rub",
+    "Modifier": 1,
+    "CurrencyIdPerKm": 8,
+    "Id": 1,
+    "Id2": "939a7610-9712-e411-8e11-00259038ec34"
+  },
+  {
+    "Name": "тыс.грн",
+    "NameEng": "th.uah",
+    "Modifier": 1000,
+    "CurrencyIdPerKm": 10,
+    "Id": 15,
+    "Id2": "a19a7610-9712-e411-8e11-00259038ec34"
+  },
+  {
+    "Name": "грн/т.",
+    "NameEng": "uah/ton",
+    "Modifier": 1,
+    "CurrencyIdPerKm": null,
+    "Id": 16,
+    "Id2": "a29a7610-9712-e411-8e11-00259038ec34"
+  },
+  {
+    "Name": "usd/т.",
+    "NameEng": "usd/ton",
+    "Modifier": 1,
+    "CurrencyIdPerKm": null,
+    "Id": 17,
+    "Id2": "a39a7610-9712-e411-8e11-00259038ec34"
+  },
+  {
+    "Name": "eur/т.",
+    "NameEng": "eur/ton",
+    "Modifier": 1,
+    "CurrencyIdPerKm": null,
+    "Id": 18,
+    "Id2": "a49a7610-9712-e411-8e11-00259038ec34"
+  },
+  {
+    "Name": "руб/час",
+    "NameEng": "rub/h",
+    "Modifier": 1,
+    "CurrencyIdPerKm": null,
+    "Id": 19,
+    "Id2": "a59a7610-9712-e411-8e11-00259038ec34"
+  },
+  {
+    "Name": "руб/куб",
+    "NameEng": "rub/cub",
+    "Modifier": 1,
+    "CurrencyIdPerKm": null,
+    "Id": 20,
+    "Id2": "a69a7610-9712-e411-8e11-00259038ec34"
+  },
+  {
+    "Name": "kzt",
+    "NameEng": "kzt",
+    "Modifier": 1,
+    "CurrencyIdPerKm": 24,
+    "Id": 21,
+    "Id2": "a79a7610-9712-e411-8e11-00259038ec34"
+  }
+]

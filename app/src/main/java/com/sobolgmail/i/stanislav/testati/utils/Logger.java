@@ -3,6 +3,8 @@ package com.sobolgmail.i.stanislav.testati.utils;
 import android.text.TextUtils;
 import android.util.Log;
 
+import com.sobolgmail.i.stanislav.testati.BuildConfig;
+
 import java.io.PrintWriter;
 import java.io.StringWriter;
 
@@ -20,19 +22,19 @@ public class Logger {
     private static boolean DISABLED = false;
 
     public static void write(String msg) {
-        if (!DISABLED && msg != null && !msg.isEmpty()) {
+        if (isEnabled() && !StringUtils.isEmpty(msg)) {
             Log.d(COMMON_TAG, msg);
         }
     }
 
     public static void writeHttp(String msg) {
-        if (!DISABLED && msg != null && !msg.isEmpty()) {
+        if (isEnabled() && msg != null && !msg.isEmpty()) {
             Log.d(HTTP_TAG, msg);
         }
     }
 
-    static void writeError(Throwable throwable) {
-        if (!DISABLED) {
+    public static void writeError(Throwable throwable) {
+        if (isEnabled()) {
             if (throwable != null) {
                 final StringWriter trace = new StringWriter();
                 throwable.printStackTrace(new PrintWriter(trace));
@@ -42,10 +44,14 @@ public class Logger {
         }
     }
 
-    static void writeErrorMessage(String msg) {
-        if (!DISABLED && !TextUtils.isEmpty(msg)) {
+    private static void writeErrorMessage(String msg) {
+        if (isEnabled() && !TextUtils.isEmpty(msg)) {
             Log.d(ERROR, msg);
             Log.e(ERROR, msg);
         }
+    }
+
+    private static boolean isEnabled() {
+        return BuildConfig.DEBUG;
     }
 }
