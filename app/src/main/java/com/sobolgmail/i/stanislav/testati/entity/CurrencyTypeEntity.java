@@ -25,13 +25,4 @@ public class CurrencyTypeEntity {
 
     @SerializedName("Id2")
     private String id2;
-
-//    "Name": "kzt/т.",
-//            "NameEng": "kzt/ton",
-//            "Modifier": 1,
-//            "CurrencyIdPerKm": null,
-//            "Id": 25,
-//            "Id2": "8628f49a-e0e6-e511-b00c-002590e45781"
-
-
 }

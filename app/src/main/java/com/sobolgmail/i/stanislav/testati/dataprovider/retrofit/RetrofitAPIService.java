@@ -1,6 +1,6 @@
 package com.sobolgmail.i.stanislav.testati.dataprovider.retrofit;
 
-import com.sobolgmail.i.stanislav.testati.entity.CargoEntity;
+import com.sobolgmail.i.stanislav.testati.entity.CargoPageEntity;
 import com.sobolgmail.i.stanislav.testati.entity.CurrencyTypeEntity;
 
 import java.util.List;
@@ -21,5 +21,5 @@ public interface RetrofitAPIService {
     Observable<List<CurrencyTypeEntity>> getCurrencyTypesObservable();
 
     @POST("loads")
-    Observable<List<CargoEntity>> getCargosObservable(@Header("Content-Type") String contentType, @Body PostBody postBody);
+    Observable<CargoPageEntity> getCargosObservable(@Header("Content-Type") String contentType, @Body PostBody postBody);
 }

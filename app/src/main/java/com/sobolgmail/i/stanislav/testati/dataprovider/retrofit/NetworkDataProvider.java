@@ -3,7 +3,7 @@ package com.sobolgmail.i.stanislav.testati.dataprovider.retrofit;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.sobolgmail.i.stanislav.testati.dataprovider.IDataProvider;
-import com.sobolgmail.i.stanislav.testati.entity.CargoEntity;
+import com.sobolgmail.i.stanislav.testati.entity.CargoPageEntity;
 import com.sobolgmail.i.stanislav.testati.entity.CurrencyTypeEntity;
 import com.sobolgmail.i.stanislav.testati.utils.Logger;
 import com.sobolgmail.i.stanislav.testati.utils.StringUtils;
@@ -40,7 +40,7 @@ public class NetworkDataProvider implements IDataProvider {
     }
 
     @Override
-    public Observable<List<CargoEntity>> getCargosObservable() {
+    public Observable<CargoPageEntity> getCargosObservable() {
         return getCargosService().getCargosObservable("application/json", new PostBody());
     }
 

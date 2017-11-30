@@ -1,6 +1,6 @@
 package com.sobolgmail.i.stanislav.testati.dataprovider;
 
-import com.sobolgmail.i.stanislav.testati.entity.CargoEntity;
+import com.sobolgmail.i.stanislav.testati.entity.CargoPageEntity;
 import com.sobolgmail.i.stanislav.testati.entity.CurrencyTypeEntity;
 
 import java.util.List;
@@ -16,5 +16,5 @@ public interface IDataProvider {
 
     Observable<List<CurrencyTypeEntity>> getCurrencyTypesObservable();
 
-    Observable<List<CargoEntity>> getCargosObservable();
+    Observable<CargoPageEntity> getCargosObservable();
 }

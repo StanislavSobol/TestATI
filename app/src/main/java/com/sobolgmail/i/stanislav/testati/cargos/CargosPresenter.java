@@ -1,12 +1,10 @@
 package com.sobolgmail.i.stanislav.testati.cargos;
 
 import com.sobolgmail.i.stanislav.testati.MApplication;
-import com.sobolgmail.i.stanislav.testati.entity.CargoEntity;
+import com.sobolgmail.i.stanislav.testati.entity.CargoPageEntity;
 import com.sobolgmail.i.stanislav.testati.interactor.IInteractor;
 import com.sobolgmail.i.stanislav.testati.mpv.BasePresenter;
 import com.sobolgmail.i.stanislav.testati.utils.Logger;
-
-import java.util.List;
 
 import javax.inject.Inject;
 
@@ -54,7 +52,7 @@ public class CargosPresenter extends BasePresenter<CargosContract.IView> impleme
                 .onBackpressureBuffer()
                 .subscribeOn(Schedulers.computation())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Subscriber<List<CargoEntity>>() {
+                .subscribe(new Subscriber<CargoPageEntity>() {
                     @Override
                     public void onCompleted() {
 
@@ -66,14 +64,10 @@ public class CargosPresenter extends BasePresenter<CargosContract.IView> impleme
                     }
 
                     @Override
-                    public void onNext(List<CargoEntity> entities) {
+                    public void onNext(CargoPageEntity entity) {
                         Logger.write(null);
                     }
                 })
         );
-
-
-
-
     }
 }
