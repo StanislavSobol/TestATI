@@ -1,13 +1,13 @@
 package com.sobolgmail.i.stanislav.testati.interactor;
 
-import com.sobolgmail.i.stanislav.testati.entity.CargoEntity;
-import com.sobolgmail.i.stanislav.testati.entity.CurrencyTypeEntity;
+import com.sobolgmail.i.stanislav.testati.entity.model.CargoModel;
+import com.sobolgmail.i.stanislav.testati.entity.model.CurrencyTypeModel;
 import com.sobolgmail.i.stanislav.testati.entity.response.CargoPageResponse;
-import com.sobolgmail.i.stanislav.testati.entity.response.CurrencyTypeResponse;
 
 import java.util.List;
 
 import rx.Observable;
+import rx.Subscriber;
 
 /**
  * Created by Stanislav Sobol on 29.11.2017.
@@ -16,13 +16,9 @@ import rx.Observable;
 
 public interface IInteractor {
 
-    Observable<List<CurrencyTypeEntity>> getCurrencyTypesObservable();
+    Observable<List<CurrencyTypeModel>> getCurrencyTypesObservable();
 
-    Observable<CargoPageResponse> getCargoPageObservable();
+    Observable<List<CargoModel>> getCargosObservable();
 
-    Observable<List<CargoEntity>> getCargosObservable();
-
-    void writeCurrencyTypesToDb(List<CurrencyTypeEntity> currencyTypeEntities);
-
-    Observable<List<CurrencyTypeEntity>> getCurrencyTypesObservableFromDb();
+    Observable<Void> writeCurrencyTypesToDb(List<CurrencyTypeModel> models);
 }

@@ -1,6 +1,6 @@
 package com.sobolgmail.i.stanislav.testati.entity.viewmodel;
 
-import com.sobolgmail.i.stanislav.testati.entity.CargoEntity;
+import com.sobolgmail.i.stanislav.testati.entity.model.CargoModel;
 
 import lombok.Setter;
 
@@ -15,8 +15,9 @@ public class CargoViewModel {
     private String cargoType;
     private String loadingCity;
     private String unloadingCity;
+    private String currencyTypeName;
 
-    public static CargoViewModel fromModel(CargoEntity item) {
+    public static CargoViewModel fromModel(CargoModel item) {
         final CargoViewModel result = new CargoViewModel();
         result.setId(item.getId());
         result.setCargoType(item.getCargoType());

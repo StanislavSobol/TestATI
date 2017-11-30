@@ -1,8 +1,7 @@
 package com.sobolgmail.i.stanislav.testati.dataprovider;
 
-import com.sobolgmail.i.stanislav.testati.entity.CurrencyTypeEntity;
+import com.sobolgmail.i.stanislav.testati.entity.model.CurrencyTypeModel;
 import com.sobolgmail.i.stanislav.testati.entity.response.CargoPageResponse;
-import com.sobolgmail.i.stanislav.testati.entity.response.CurrencyTypeResponse;
 
 import java.util.List;
 
@@ -14,11 +13,11 @@ import rx.Observable;
  */
 
 public interface IDataProvider {
-    long NETWORK_TIMEOUT_MS = 60 * 1000;
+    long NETWORK_TIMEOUT_MS = 10 * 1000;
     String CURRENCY_TYPES_URL = "http://api.ati.su/v1.0/";
     String CARGOS_URL = "http://loads.ati.su/api/";
 
-    Observable<List<CurrencyTypeEntity>> getCurrencyTypesObservable();
+    Observable<List<CurrencyTypeModel>> getCurrencyTypesObservable();
 
     Observable<CargoPageResponse> getCargoPageObservable();
 }

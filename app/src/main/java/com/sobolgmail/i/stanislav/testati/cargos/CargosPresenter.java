@@ -1,8 +1,9 @@
 package com.sobolgmail.i.stanislav.testati.cargos;
 
 import com.sobolgmail.i.stanislav.testati.MApplication;
-import com.sobolgmail.i.stanislav.testati.entity.CargoEntity;
-import com.sobolgmail.i.stanislav.testati.entity.CurrencyTypeEntity;
+import com.sobolgmail.i.stanislav.testati.dataprovider.IDataProvider;
+import com.sobolgmail.i.stanislav.testati.entity.model.CargoModel;
+import com.sobolgmail.i.stanislav.testati.entity.model.CurrencyTypeModel;
 import com.sobolgmail.i.stanislav.testati.entity.viewmodel.CargoViewModel;
 import com.sobolgmail.i.stanislav.testati.interactor.IInteractor;
 import com.sobolgmail.i.stanislav.testati.mpv.BasePresenter;
@@ -33,75 +34,6 @@ public class CargosPresenter extends BasePresenter<CargosContract.IView> impleme
 
     public CargosPresenter() {
         MApplication.getDaggerComponents().inject(this);
-
-
-//        compositeSubscription.add(interactor.getCurrencyTypesObservable()
-//                .onBackpressureBuffer()
-//                .subscribeOn(Schedulers.computation())
-//                .observeOn(AndroidSchedulers.mainThread())
-//                .subscribe(new Subscriber<List<CurrencyTypeEntity>>() {
-//                    @Override
-//                    public void onCompleted() {
-//
-//                    }
-//
-//                    @Override
-//                    public void onError(Throwable e) {
-//                        Logger.write(e.getMessage());
-//                    }
-//
-//                    @Override
-//                    public void onNext(List<CurrencyTypeEntity> entities) {
-//                        Logger.write(null);
-//                    }
-//                })
-//        );
-
-//        compositeSubscription.add(interactor.getCargoPageObservable()
-//                .onBackpressureBuffer()
-//                .subscribeOn(Schedulers.computation())
-//                .observeOn(AndroidSchedulers.mainThread())
-//                .subscribe(new Subscriber<CargoPageEntity>() {
-//                    @Override
-//                    public void onCompleted() {
-//
-//                    }
-//
-//                    @Override
-//                    public void onError(Throwable e) {
-//                        Logger.write(e.getMessage());
-//                    }
-//
-//                    @Override
-//                    public void onNext(CargoPageEntity entity) {
-//                        Logger.write(null);
-//                    }
-//                })
-//        );
-
-
-//        compositeSubscription.add(interactor.getCargosObservable()
-//                //     .timeout(1, TimeUnit.MILLISECONDS)
-//                .onBackpressureBuffer()
-//                .subscribeOn(Schedulers.computation())
-//                .observeOn(AndroidSchedulers.mainThread())
-//                .subscribe(new Subscriber<List<CargoEntity>>() {
-//                    @Override
-//                    public void onCompleted() {
-//
-//                    }
-//
-//                    @Override
-//                    public void onError(Throwable e) {
-//                        Logger.writeError(e);
-//                    }
-//
-//                    @Override
-//                    public void onNext(List<CargoEntity> list) {
-//                        Logger.write(null);
-//                    }
-//                })
-//        );
     }
 
     @Override
@@ -109,9 +41,57 @@ public class CargosPresenter extends BasePresenter<CargosContract.IView> impleme
         loadCargosFromDb();
     }
 
-    private void loadCargos() {
+    @Override
+    protected void onBindWhenNotChangingConfiguration() {
+        loadCurrencyTypesFromNetwork();
+    }
+
+    private void loadCurrencyTypesFromNetwork() {
+        compositeSubscription.add(
+                interactor.getCurrencyTypesObservable()
+                        .timeout(IDataProvider.NETWORK_TIMEOUT_MS, TimeUnit.MILLISECONDS)
+                        .onBackpressureBuffer()
+                        .subscribeOn(Schedulers.computation())
+                        .observeOn(AndroidSchedulers.mainThread())
+                        .doOnError(new Action1<Throwable>() {
+                            @Override
+                            public void call(Throwable t) {
+                                Logger.writeError(t);
+                                if (t instanceof TimeoutException) {
+                                    Logger.write("TimeoutException");
+                                }
+                            }
+                        })
+                        .doOnNext(new Action1<List<CurrencyTypeModel>>() {
+                            @Override
+                            public void call(List<CurrencyTypeModel> currencyTypeEntities) {
+                                interactor.writeCurrencyTypesToDb(currencyTypeEntities)
+                                        .subscribeOn(Schedulers.computation())
+                                        .observeOn(AndroidSchedulers.mainThread())
+                                        .subscribe(new Subscriber<Void>() {
+                                            @Override
+                                            public void onCompleted() {
+                                            }
+
+                                            @Override
+                                            public void onError(Throwable e) {
+                                                Logger.writeError(e);
+                                            }
+
+                                            @Override
+                                            public void onNext(Void aVoid) {
+                                                loadCargosFromNetwork();
+                                            }
+                                        });
+                            }
+                        })
+                        .subscribe()
+        );
+    }
+
+    private void loadCargosFromNetwork() {
         compositeSubscription.add(interactor.getCargosObservable()
-                .timeout(300, TimeUnit.SECONDS)
+                .timeout(IDataProvider.NETWORK_TIMEOUT_MS, TimeUnit.MILLISECONDS)
                 .onBackpressureBuffer()
                 .subscribeOn(Schedulers.computation())
                 .observeOn(AndroidSchedulers.mainThread())
@@ -125,19 +105,20 @@ public class CargosPresenter extends BasePresenter<CargosContract.IView> impleme
                         loadCargosFromDb();
                     }
                 })
-                .doOnNext(new Action1<List<CargoEntity>>() {
+                .doOnNext(new Action1<List<CargoModel>>() {
                     @Override
-                    public void call(List<CargoEntity> cargoEntities) {
-                        Logger.write("");
+                    public void call(List<CargoModel> cargoModels) {
+
                     }
                 })
-                .map(new Func1<List<CargoEntity>, List<CargoViewModel>>() {
+                .map(new Func1<List<CargoModel>, List<CargoViewModel>>() {
                     @Override
-                    public List<CargoViewModel> call(List<CargoEntity> cargoEntities) {
+                    public List<CargoViewModel> call(List<CargoModel> cargoModels) {
                         final List<CargoViewModel> result = new ArrayList<>();
-                        for (final CargoEntity item : cargoEntities) {
+                        for (final CargoModel item : cargoModels) {
                             result.add(CargoViewModel.fromModel(item));
                         }
+
                         return result;
                     }
                 })
@@ -149,31 +130,6 @@ public class CargosPresenter extends BasePresenter<CargosContract.IView> impleme
                 })
                 .subscribe()
         );
-
-
-
-//        compositeSubscription.add(interactor.getCargosObservable()
-//                .timeout(30, TimeUnit.SECONDS)
-//                .onBackpressureBuffer()
-//                .subscribeOn(Schedulers.computation())
-//                .observeOn(AndroidSchedulers.mainThread())
-//                .subscribe(new Subscriber<List<CargoEntity>>() {
-//                    @Override
-//                    public void onCompleted() {
-//
-//                    }
-//
-//                    @Override
-//                    public void onError(Throwable e) {
-//                        Logger.writeError(e);
-//                    }
-//
-//                    @Override
-//                    public void onNext(List<CargoEntity> list) {
-//                        Logger.write(null);
-//                    }
-//                })
-//        );
     }
 
     private void loadCargosFromDb() {
@@ -184,32 +140,5 @@ public class CargosPresenter extends BasePresenter<CargosContract.IView> impleme
 
     }
 
-    @Override
-    protected void onBindWhenNotChangingConfiguration() {
-        compositeSubscription.add(
-                interactor.getCurrencyTypesObservable()
-                        .timeout(30, TimeUnit.SECONDS)
-                        .onBackpressureBuffer()
-                        .subscribeOn(Schedulers.computation())
-                        .observeOn(AndroidSchedulers.mainThread())
-                        .doOnError(new Action1<Throwable>() {
-                            @Override
-                            public void call(Throwable t) {
-                                Logger.writeError(t);
-                                if (t instanceof TimeoutException) {
-                                    Logger.write("TimeoutException");
-                                }
-                            }
-                        })
-                        .doOnNext(new Action1<List<CurrencyTypeEntity>>() {
-                            @Override
-                            public void call(List<CurrencyTypeEntity> currencyTypeEntities) {
-                                interactor.writeCurrencyTypesToDb(currencyTypeEntities);
-                                loadCargos();
-                            }
-                        })
-                        .subscribe()
-        );
-    }
 
 }

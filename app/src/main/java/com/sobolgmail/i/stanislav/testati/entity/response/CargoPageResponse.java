@@ -77,6 +77,10 @@ public class CargoPageResponse {
         public static class Rate {
             @SerializedName("currency")
             private Integer currencyId;
+
+            public int getCurrencyId() {
+                return currencyId == null ? 0 : currencyId;
+            }
         }
     }
 

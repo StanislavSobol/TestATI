@@ -2,10 +2,10 @@ package com.sobolgmail.i.stanislav.testati.interactor;
 
 import com.sobolgmail.i.stanislav.testati.MApplication;
 import com.sobolgmail.i.stanislav.testati.dataprovider.IDataProvider;
-import com.sobolgmail.i.stanislav.testati.entity.CargoEntity;
-import com.sobolgmail.i.stanislav.testati.entity.CurrencyTypeEntity;
+import com.sobolgmail.i.stanislav.testati.dataprovider.db.ISqlOrmManager;
+import com.sobolgmail.i.stanislav.testati.entity.model.CargoModel;
+import com.sobolgmail.i.stanislav.testati.entity.model.CurrencyTypeModel;
 import com.sobolgmail.i.stanislav.testati.entity.response.CargoPageResponse;
-import com.sobolgmail.i.stanislav.testati.entity.response.CurrencyTypeResponse;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,6 +13,7 @@ import java.util.List;
 import javax.inject.Inject;
 
 import rx.Observable;
+import rx.Subscriber;
 import rx.functions.Func1;
 
 /**
@@ -25,28 +26,26 @@ public class Interactor implements IInteractor {
     @Inject
     IDataProvider dataProvider;
 
+    @Inject
+    ISqlOrmManager sqlOrmManager;
+
     public Interactor() {
         MApplication.getDaggerComponents().inject(this);
     }
 
     @Override
-    public Observable<List<CurrencyTypeEntity>> getCurrencyTypesObservable() {
+    public Observable<List<CurrencyTypeModel>> getCurrencyTypesObservable() {
         return dataProvider.getCurrencyTypesObservable();
     }
 
     @Override
-    public Observable<CargoPageResponse> getCargoPageObservable() {
-        return dataProvider.getCargoPageObservable();
-    }
-
-    @Override
-    public Observable<List<CargoEntity>> getCargosObservable() {
-        return dataProvider.getCargoPageObservable().flatMap(new Func1<CargoPageResponse, Observable<List<CargoEntity>>>() {
+    public Observable<List<CargoModel>> getCargosObservable() {
+        return dataProvider.getCargoPageObservable().flatMap(new Func1<CargoPageResponse, Observable<List<CargoModel>>>() {
             @Override
-            public Observable<List<CargoEntity>> call(CargoPageResponse cargoPageResponse) {
-                final List<CargoEntity> result = new ArrayList<>();
+            public Observable<List<CargoModel>> call(CargoPageResponse cargoPageResponse) {
+                final List<CargoModel> result = new ArrayList<>();
                 for (final CargoPageResponse.Load item : cargoPageResponse.getLoads()) {
-                    result.add(CargoEntity.fromResponseItem(item));
+                    result.add(CargoModel.fromResponseItem(item));
                 }
                 return Observable.from(result).toList();
             }
@@ -54,12 +53,7 @@ public class Interactor implements IInteractor {
     }
 
     @Override
-    public void writeCurrencyTypesToDb(List<CurrencyTypeEntity> currencyTypeEntities) {
-
-    }
-
-    @Override
-    public Observable<List<CurrencyTypeEntity>> getCurrencyTypesObservableFromDb() {
-        return null;
+    public Observable<Void> writeCurrencyTypesToDb(final List<CurrencyTypeModel> models) {
+        return sqlOrmManager.writeCurrencyTypes(models);
     }
 }

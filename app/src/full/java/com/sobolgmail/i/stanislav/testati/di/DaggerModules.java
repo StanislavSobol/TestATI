@@ -1,6 +1,8 @@
 package com.sobolgmail.i.stanislav.testati.di;
 
 import com.sobolgmail.i.stanislav.testati.dataprovider.IDataProvider;
+import com.sobolgmail.i.stanislav.testati.dataprovider.db.ISqlOrmManager;
+import com.sobolgmail.i.stanislav.testati.dataprovider.db.SqlOrmManager;
 import com.sobolgmail.i.stanislav.testati.dataprovider.retrofit.NetworkDataProvider;
 import com.sobolgmail.i.stanislav.testati.interactor.IInteractor;
 import com.sobolgmail.i.stanislav.testati.interactor.Interactor;
@@ -27,5 +29,11 @@ public class DaggerModules {
     @Singleton
     IDataProvider providesDataProvider() {
         return new NetworkDataProvider();
+    }
+
+    @Provides
+    @Singleton
+    ISqlOrmManager providesSqlOrmManager() {
+        return new SqlOrmManager();
     }
 }

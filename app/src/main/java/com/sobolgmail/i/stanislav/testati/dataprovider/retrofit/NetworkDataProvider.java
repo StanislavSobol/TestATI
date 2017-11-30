@@ -3,20 +3,17 @@ package com.sobolgmail.i.stanislav.testati.dataprovider.retrofit;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.sobolgmail.i.stanislav.testati.dataprovider.IDataProvider;
-import com.sobolgmail.i.stanislav.testati.entity.CurrencyTypeEntity;
+import com.sobolgmail.i.stanislav.testati.entity.model.CurrencyTypeModel;
 import com.sobolgmail.i.stanislav.testati.entity.response.CargoPageResponse;
 import com.sobolgmail.i.stanislav.testati.entity.response.CurrencyTypeResponse;
 import com.sobolgmail.i.stanislav.testati.utils.Logger;
 import com.sobolgmail.i.stanislav.testati.utils.StringUtils;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
-import okhttp3.Response;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
@@ -37,15 +34,15 @@ public class NetworkDataProvider implements IDataProvider {
     private RetrofitAPIService cargosService;
 
     @Override
-    public Observable<List<CurrencyTypeEntity>> getCurrencyTypesObservable() {
+    public Observable<List<CurrencyTypeModel>> getCurrencyTypesObservable() {
         return getCurrencyTypeService()
                 .getCurrencyTypesObservable()
-                .map(new Func1<List<CurrencyTypeResponse>, List<CurrencyTypeEntity>>() {
+                .map(new Func1<List<CurrencyTypeResponse>, List<CurrencyTypeModel>>() {
                     @Override
-                    public List<CurrencyTypeEntity> call(List<CurrencyTypeResponse> currencyTypeResponses) {
-                        final List<CurrencyTypeEntity> result = new ArrayList<>();
+                    public List<CurrencyTypeModel> call(List<CurrencyTypeResponse> currencyTypeResponses) {
+                        final List<CurrencyTypeModel> result = new ArrayList<>();
                         for (final CurrencyTypeResponse item : currencyTypeResponses) {
-                            result.add(CurrencyTypeEntity.fromResponseItem(item));
+                            result.add(CurrencyTypeModel.fromResponseItem(item));
                         }
                         return result;
                     }
