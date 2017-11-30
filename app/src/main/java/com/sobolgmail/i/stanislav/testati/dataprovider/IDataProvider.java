@@ -16,5 +16,5 @@ public interface IDataProvider {
 
     Observable<List<CurrencyTypeEntity>> getCurrencyTypesObservable();
 
-    Observable<CargoPageEntity> getCargosObservable();
+    Observable<CargoPageEntity> getCargoPageObservable();
 }

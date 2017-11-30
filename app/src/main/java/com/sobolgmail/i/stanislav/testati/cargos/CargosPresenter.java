@@ -1,10 +1,12 @@
 package com.sobolgmail.i.stanislav.testati.cargos;
 
 import com.sobolgmail.i.stanislav.testati.MApplication;
-import com.sobolgmail.i.stanislav.testati.entity.CargoPageEntity;
+import com.sobolgmail.i.stanislav.testati.entity.CargoEntity;
 import com.sobolgmail.i.stanislav.testati.interactor.IInteractor;
 import com.sobolgmail.i.stanislav.testati.mpv.BasePresenter;
 import com.sobolgmail.i.stanislav.testati.utils.Logger;
+
+import java.util.List;
 
 import javax.inject.Inject;
 
@@ -48,11 +50,34 @@ public class CargosPresenter extends BasePresenter<CargosContract.IView> impleme
 //                })
 //        );
 
+//        compositeSubscription.add(interactor.getCargoPageObservable()
+//                .onBackpressureBuffer()
+//                .subscribeOn(Schedulers.computation())
+//                .observeOn(AndroidSchedulers.mainThread())
+//                .subscribe(new Subscriber<CargoPageEntity>() {
+//                    @Override
+//                    public void onCompleted() {
+//
+//                    }
+//
+//                    @Override
+//                    public void onError(Throwable e) {
+//                        Logger.write(e.getMessage());
+//                    }
+//
+//                    @Override
+//                    public void onNext(CargoPageEntity entity) {
+//                        Logger.write(null);
+//                    }
+//                })
+//        );
+
+
         compositeSubscription.add(interactor.getCargosObservable()
                 .onBackpressureBuffer()
                 .subscribeOn(Schedulers.computation())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Subscriber<CargoPageEntity>() {
+                .subscribe(new Subscriber<List<CargoEntity>>() {
                     @Override
                     public void onCompleted() {
 
@@ -64,7 +89,7 @@ public class CargosPresenter extends BasePresenter<CargosContract.IView> impleme
                     }
 
                     @Override
-                    public void onNext(CargoPageEntity entity) {
+                    public void onNext(List<CargoEntity> list) {
                         Logger.write(null);
                     }
                 })

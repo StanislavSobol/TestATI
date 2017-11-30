@@ -40,8 +40,8 @@ public class NetworkDataProvider implements IDataProvider {
     }
 
     @Override
-    public Observable<CargoPageEntity> getCargosObservable() {
-        return getCargosService().getCargosObservable("application/json", new PostBody());
+    public Observable<CargoPageEntity> getCargoPageObservable() {
+        return getCargosService().getCargoPageObservable("application/json", new PostBody());
     }
 
     private RetrofitAPIService getCurrencyTypeService() {
@@ -96,6 +96,17 @@ public class NetworkDataProvider implements IDataProvider {
 
     private Gson getGson() {
         final GsonBuilder gsonBuilder = new GsonBuilder();
+//        gsonBuilder.registerTypeAdapter(CargoPageEntity.class, new CargoPageEntityDeserializer());
         return gsonBuilder.create();
     }
+
+//    private static class CargoPageEntityDeserializer implements JsonDeserializer<CargoPageEntity> {
+//
+//        private final Gson gson_ = new GsonBuilder().create();
+//
+//        @Override
+//        public CargoPageEntity deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {
+//            return null;
+//        }
+//    }
 }

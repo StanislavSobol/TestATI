@@ -21,5 +21,5 @@ public interface RetrofitAPIService {
     Observable<List<CurrencyTypeEntity>> getCurrencyTypesObservable();
 
     @POST("loads")
-    Observable<CargoPageEntity> getCargosObservable(@Header("Content-Type") String contentType, @Body PostBody postBody);
+    Observable<CargoPageEntity> getCargoPageObservable(@Header("Content-Type") String contentType, @Body PostBody postBody);
 }

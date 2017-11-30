@@ -1,5 +1,6 @@
 package com.sobolgmail.i.stanislav.testati.interactor;
 
+import com.sobolgmail.i.stanislav.testati.entity.CargoEntity;
 import com.sobolgmail.i.stanislav.testati.entity.CargoPageEntity;
 import com.sobolgmail.i.stanislav.testati.entity.CurrencyTypeEntity;
 
@@ -16,5 +17,8 @@ public interface IInteractor {
 
     Observable<List<CurrencyTypeEntity>> getCurrencyTypesObservable();
 
-    Observable<CargoPageEntity> getCargosObservable();
+    Observable<CargoPageEntity> getCargoPageObservable();
+
+    Observable<List<CargoEntity>> getCargosObservable();
+
 }
