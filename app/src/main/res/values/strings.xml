@@ -1,4 +1,13 @@
 <resources>
-    <string name="app_name">TestATI</string>
+    <string name="app_name">TestATI  - test task</string>
     <integer name="ripple_duration">300</integer>
+    <string name="error_no_internet">Нет Интернета. Гружу из БД</string>
+    <string name="details_title">Информация о грузе</string>
+
+    <string name="details_caro_type_label">Tип груза</string>
+    <string name="details_load_label">Место загрузки</string>
+    <string name="details_unload_label">Место разгрузки</string>
+    <string name="details_note_label">Комментарий</string>
+    <string name="details_currency_label">Название из словаря</string>
+
 </resources>

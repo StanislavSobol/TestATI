@@ -51,7 +51,6 @@ public class CargoModel {
         result.setLoadingCity(responseLoaditem.getLoading().getLocation().getCity());
         result.setUnloadingCity(responseLoaditem.getUnloading().getLocation().getCity());
         result.setNote(responseLoaditem.getNote());
-        // result.setCurrencyId(responseLoaditem.getRate().getCurrencyId());
         result.getCurrencyTypeModel().setId(responseLoaditem.getRate().getCurrencyId());
         return result;
     }

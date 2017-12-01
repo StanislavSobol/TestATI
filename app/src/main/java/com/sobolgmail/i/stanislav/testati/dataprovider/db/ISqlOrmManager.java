@@ -19,4 +19,6 @@ public interface ISqlOrmManager {
     Observable<Void> writeCargosToDb(List<CargoModel> models);
 
     Observable<List<CargoModel>> loadCargosFromDb();
+
+    Observable<CargoModel> getCargoObservable(String id);
 }

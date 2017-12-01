@@ -18,8 +18,16 @@ import okhttp3.ResponseBody;
  */
 
 class MockInterceptor implements Interceptor {
+    private static final long MOCK_SLEEP_TIME_MS = 1000;
+
     @Override
     public Response intercept(Chain chain) throws IOException {
+        try {
+            Thread.sleep(MOCK_SLEEP_TIME_MS);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
         String jsonString = "";
 
         final String url = chain.request().url().toString();

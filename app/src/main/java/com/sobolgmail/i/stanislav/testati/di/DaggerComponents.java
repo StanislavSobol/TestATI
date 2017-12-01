@@ -1,6 +1,7 @@
 package com.sobolgmail.i.stanislav.testati.di;
 
 import com.sobolgmail.i.stanislav.testati.cargos.CargosPresenter;
+import com.sobolgmail.i.stanislav.testati.details.DetailsPresenter;
 import com.sobolgmail.i.stanislav.testati.interactor.Interactor;
 
 import javax.inject.Singleton;
@@ -19,4 +20,6 @@ public interface DaggerComponents {
     void inject(CargosPresenter place);
 
     void inject(Interactor place);
+
+    void inject(DetailsPresenter place);
 }

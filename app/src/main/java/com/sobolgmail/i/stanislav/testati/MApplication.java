@@ -2,6 +2,9 @@ package com.sobolgmail.i.stanislav.testati;
 
 import android.app.Application;
 import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.widget.Toast;
 
 import com.sobolgmail.i.stanislav.testati.di.DaggerComponents;
 import com.sobolgmail.i.stanislav.testati.di.DaggerDaggerComponents;
@@ -29,5 +32,25 @@ public class MApplication extends Application {
 
     public static Context getAppContext() {
         return instance.getApplicationContext();
+    }
+
+    public static boolean isOnlineWithToast(boolean showToastIfNot) {
+        final ConnectivityManager cm =
+                (ConnectivityManager) instance.getSystemService(Context.CONNECTIVITY_SERVICE);
+
+        if (cm == null) {
+            return false ;
+        }
+
+        final NetworkInfo netInfo = cm.getActiveNetworkInfo();
+
+        final boolean result = netInfo != null && netInfo.isConnectedOrConnecting();
+
+        if (showToastIfNot && !result) {
+            final String s = instance.getResources().getString(R.string.error_no_internet);
+            Toast.makeText(instance, s, Toast.LENGTH_SHORT).show();
+        }
+
+        return result;
     }
 }

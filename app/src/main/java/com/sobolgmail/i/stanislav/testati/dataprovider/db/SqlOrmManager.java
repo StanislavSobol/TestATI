@@ -70,18 +70,23 @@ public class SqlOrmManager extends OrmLiteSqliteOpenHelper implements ISqlOrmMan
     }
 
     @Override
-    public Observable<Void> writeCurrencyTypes(List<CurrencyTypeModel> models) {
+    public Observable<Void> writeCurrencyTypes(final List<CurrencyTypeModel> models) {
         return currencyTypeDao.write(models);
     }
 
     @Override
-    public Observable<Void> writeCargosToDb(List<CargoModel> models) {
+    public Observable<Void> writeCargosToDb(final List<CargoModel> models) {
         return cargoDao.write(models);
     }
 
     @Override
     public Observable<List<CargoModel>> loadCargosFromDb() {
         return cargoDao.loadAll();
+    }
+
+    @Override
+    public Observable<CargoModel> getCargoObservable(final String id) {
+        return cargoDao.get(id);
     }
 
     public ArrayList<Cursor> getData(String Query) {

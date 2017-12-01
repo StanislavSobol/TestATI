@@ -4,4 +4,9 @@
     <dimen name="big_text_size">16sp</dimen>
     <dimen name="small_text_size">12sp</dimen>
     <dimen name="cargo_padding">4dp</dimen>
+    <dimen name="details_margin">10dp</dimen>
+    <dimen name="details_margin_small">4dp</dimen>
+
+    <dimen name="detail_big_text_size">24sp</dimen>
+    <dimen name="detail_small_text_size">18sp</dimen>
 </resources>

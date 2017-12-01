@@ -53,4 +53,18 @@ public class CargoDao extends BaseDaoImpl<CargoModel, Object> {
             }
         });
     }
+
+    public Observable<CargoModel> get(final String id) {
+        return Observable.create(new Observable.OnSubscribe<CargoModel>() {
+            @Override
+            public void call(Subscriber<? super CargoModel> subscriber) {
+                try {
+                    subscriber.onNext(queryForId(id));
+                    subscriber.onCompleted();
+                } catch (SQLException e) {
+                    subscriber.onError(e);
+                }
+            }
+        });
+    }
 }

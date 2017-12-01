@@ -14,6 +14,7 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import lombok.Setter;
 
 /**
  * Created by Stanislav Sobol on 30.11.2017.
@@ -23,6 +24,8 @@ import butterknife.ButterKnife;
 class CargosAdapter extends RecyclerView.Adapter<CargosAdapter.Holder> {
 
     private List<CargoViewModel> items = new ArrayList<>();
+    @Setter
+    private OnItemClickListener onItemClickListener;
 
     @Override
     public Holder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -56,22 +59,27 @@ class CargosAdapter extends RecyclerView.Adapter<CargosAdapter.Holder> {
         @BindView(R.id.cargo_item_unloading_city_text_view)
         TextView unloadingCityTextView;
 
-
-        public Holder(View itemView) {
+        Holder(View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
         }
 
-        public void bind(final CargoViewModel vm) {
+        void bind(final CargoViewModel vm) {
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-
+                    if (onItemClickListener != null) {
+                        onItemClickListener.OnItemClick(vm.getId());
+                    }
                 }
             });
             cargoTypeTextView.setText(vm.getCargoType());
             loadingCityTextView.setText(vm.getLoadingCity());
             unloadingCityTextView.setText(vm.getUnloadingCity());
         }
+    }
+
+    interface OnItemClickListener {
+        void OnItemClick(String id);
     }
 }

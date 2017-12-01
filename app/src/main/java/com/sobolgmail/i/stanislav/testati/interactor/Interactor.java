@@ -65,4 +65,9 @@ public class Interactor implements IInteractor {
     public Observable<List<CargoModel>> loadCargosFromDb() {
         return sqlOrmManager.loadCargosFromDb();
     }
+
+    @Override
+    public Observable<CargoModel> getCargoObservable(final String id) {
+        return sqlOrmManager.getCargoObservable(id);
+    }
 }

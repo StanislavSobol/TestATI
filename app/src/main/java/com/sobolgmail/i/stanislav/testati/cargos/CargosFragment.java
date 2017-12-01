@@ -8,10 +8,13 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 
 import com.sobolgmail.i.stanislav.testati.R;
+import com.sobolgmail.i.stanislav.testati.details.DetailsActivity;
 import com.sobolgmail.i.stanislav.testati.entity.viewmodel.CargoViewModel;
 import com.sobolgmail.i.stanislav.testati.mpv.BaseFragment;
+import com.sobolgmail.i.stanislav.testati.utils.Logger;
 
 import java.util.List;
 
@@ -31,6 +34,9 @@ public class CargosFragment extends BaseFragment<CargosContract.IPresenter> impl
        return new CargosFragment();
     }
 
+    @BindView(R.id.full_progress_bar)
+    ProgressBar progressBar;
+
     @BindView(R.id.fragment_cargos_recycler_view)
     RecyclerView recyclerView;
 
@@ -41,23 +47,36 @@ public class CargosFragment extends BaseFragment<CargosContract.IPresenter> impl
 
     @Override
     protected void initViews() {
+        setProgressBarVisible(true);
         // only for debug purpose - shows the DB structure
         // startActivity(new Intent(CargosFragment.this.getActivity(), AndroidDatabaseManagerActivity.class));
         final LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.addItemDecoration(new DividerItemDecoration(recyclerView.getContext(), layoutManager.getOrientation()));
         recyclerView.setAdapter(adapter = new CargosAdapter());
+
+        adapter.setOnItemClickListener(new CargosAdapter.OnItemClickListener() {
+            @Override
+            public void OnItemClick(String id) {
+                Logger.write(id);
+                DetailsActivity.startActivity(getActivity(), id);
+            }
+        });
     }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-        final View view = inflater.inflate(R.layout.fragment_cargos, container, false);
-        return view;
+        return inflater.inflate(R.layout.fragment_cargos, container, false);
     }
 
     @Override
     public void setCargoViewModels(List<CargoViewModel> cargoViewModels) {
         adapter.setItems(cargoViewModels);
+        setProgressBarVisible(false);
+    }
+
+    private void setProgressBarVisible(final boolean visible) {
+        progressBar.setVisibility(visible ? View.VISIBLE : View.GONE);
     }
 }
