@@ -138,16 +138,6 @@ public class CargosPresenter extends BasePresenter<CargosContract.IView> impleme
                 .onBackpressureBuffer()
                 .subscribeOn(Schedulers.computation())
                 .observeOn(AndroidSchedulers.mainThread())
-                .doOnError(new Action1<Throwable>() {
-                    @Override
-                    public void call(Throwable t) {
-                        Logger.writeError(t);
-                        if (t instanceof TimeoutException) {
-                            Logger.write("TimeoutException");
-                        }
-                        loadCargosFromDb();
-                    }
-                })
                 .doOnNext(new Action1<List<CargoModel>>() {
                     @Override
                     public void call(List<CargoModel> cargoModels) {
@@ -168,14 +158,72 @@ public class CargosPresenter extends BasePresenter<CargosContract.IView> impleme
                         return CargoViewModel.fromModelsList(cargoModels);
                     }
                 })
-                .doOnNext(new Action1<List<CargoViewModel>>() {
+                .subscribe(new Subscriber<List<CargoViewModel>>() {
                     @Override
-                    public void call(List<CargoViewModel> cargoViewModels) {
+                    public void onCompleted() {
+
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        Logger.writeError(e);
+                        if (e instanceof TimeoutException) {
+                            Logger.write("TimeoutException");
+                        }
+                        loadCargosFromDb();
+                    }
+
+                    @Override
+                    public void onNext(List<CargoViewModel> cargoViewModels) {
                         getView().setCargoViewModels(cargoViewModels);
                     }
                 })
-                .subscribe()
         );
+
+
+//        compositeSubscription.add(interactor.getCargosObservable()
+//                .timeout(IDataProvider.NETWORK_TIMEOUT_MS, TimeUnit.MILLISECONDS)
+//                .onBackpressureBuffer()
+//                .subscribeOn(Schedulers.computation())
+//                .observeOn(AndroidSchedulers.mainThread())
+//                .doOnError(new Action1<Throwable>() {
+//                    @Override
+//                    public void call(Throwable t) {
+//                        Logger.writeError(t);
+//                        if (t instanceof TimeoutException) {
+//                            Logger.write("TimeoutException");
+//                        }
+//                        loadCargosFromDb();
+//                    }
+//                })
+//                .doOnNext(new Action1<List<CargoModel>>() {
+//                    @Override
+//                    public void call(List<CargoModel> cargoModels) {
+//                        for (final CargoModel cargo : cargoModels) {
+//                            for (final CurrencyTypeModel type : currencyTypeModels) {
+//                                if (type.getId() == cargo.getCurrencyTypeModel().getId()) {
+//                                    cargo.setCurrencyTypeModel(type);
+//                                    break;
+//                                }
+//                            }
+//                        }
+//                        writeCargosToDb(cargoModels, currencyTypeModels);
+//                    }
+//                })
+//                .map(new Func1<List<CargoModel>, List<CargoViewModel>>() {
+//                    @Override
+//                    public List<CargoViewModel> call(List<CargoModel> cargoModels) {
+//                        return CargoViewModel.fromModelsList(cargoModels);
+//                    }
+//                })
+//                .doOnNext(new Action1<List<CargoViewModel>>() {
+//                    @Override
+//                    public void call(List<CargoViewModel> cargoViewModels) {
+//                        getView().setCargoViewModels(cargoViewModels);
+//                    }
+//                })
+//                .subscribe()
+//        );
     }
 
     private void writeCargosToDb(final List<CargoModel> cargoModels, final List<CurrencyTypeModel> currencyTypeModels) {
