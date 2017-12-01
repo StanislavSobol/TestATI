@@ -13,33 +13,90 @@
     app:mrl_rippleDuration="@integer/ripple_duration"
     app:mrl_rippleOverlay="true">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="@dimen/cargo_padding">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/cargo_item_cargo_type_text_view"
-            android:layout_width="wrap_content"
+        <ImageView
+            android:id="@+id/cargo_item_image"
+            android:layout_width="@dimen/detail_image_size"
+            android:layout_height="@dimen/detail_image_size"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_info_outline_black_24dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/big_text_size"
-            tools:text="cargo_item_cargo_type_text_view" />
+            android:layout_toEndOf="@+id/cargo_item_image"
+            android:layout_toRightOf="@+id/cargo_item_image"
+            android:orientation="vertical"
+            android:padding="@dimen/cargo_padding">
 
-        <TextView
-            android:id="@+id/cargo_item_loading_city_text_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/small_text_size"
-            tools:text="cargo_item_loading_city_text_view" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/cargo_item_unloading_city_text_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/small_text_size"
-            tools:text="cargo_item_unloading_city_text_view" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/details_caro_type_label"
+                    android:textSize="@dimen/big_text_size" />
 
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/cargo_item_cargo_type_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/details_margin_small"
+                    android:layout_marginStart="@dimen/details_margin_small"
+                    android:textSize="@dimen/big_text_size"
+                    tools:text="cargo_item_cargo_type_text_view" />
 
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/details_load_label"
+                    android:textSize="@dimen/small_text_size" />
+
+                <TextView
+                    android:id="@+id/cargo_item_loading_city_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/details_margin_small"
+                    android:layout_marginStart="@dimen/details_margin_small"
+                    android:textSize="@dimen/small_text_size"
+                    tools:text="cargo_item_loading_city_text_view" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/details_unload_label"
+                    android:textSize="@dimen/small_text_size" />
+
+                <TextView
+                    android:id="@+id/cargo_item_unloading_city_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/details_margin_small"
+                    android:layout_marginStart="@dimen/details_margin_small"
+                    android:textSize="@dimen/small_text_size"
+                    tools:text="cargo_item_unloading_city_text_view" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
 </com.balysv.materialripple.MaterialRippleLayout>
