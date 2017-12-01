@@ -18,7 +18,6 @@ public interface IInteractor {
 
     Observable<List<CargoModel>> getCargosObservable();
 
-    @Deprecated
     Observable<Void> writeCurrencyTypesToDb(List<CurrencyTypeModel> models);
 
     Observable<Void> writeCargosToDb(List<CargoModel> models);

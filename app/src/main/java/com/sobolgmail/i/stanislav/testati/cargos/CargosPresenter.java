@@ -159,7 +159,7 @@ public class CargosPresenter extends BasePresenter<CargosContract.IView> impleme
                                 }
                             }
                         }
-                        writeCargosToDb(cargoModels);
+                        writeCargosToDb(cargoModels, currencyTypeModels);
                     }
                 })
                 .map(new Func1<List<CargoModel>, List<CargoViewModel>>() {
@@ -178,17 +178,46 @@ public class CargosPresenter extends BasePresenter<CargosContract.IView> impleme
         );
     }
 
-    private void writeCargosToDb(List<CargoModel> cargoModels) {
-        interactor.writeCargosToDb(cargoModels)
+    private void writeCargosToDb(final List<CargoModel> cargoModels, final List<CurrencyTypeModel> currencyTypeModels) {
+        interactor.writeCurrencyTypesToDb(currencyTypeModels)
                 .subscribeOn(Schedulers.computation())
                 .observeOn(AndroidSchedulers.mainThread())
-                .doOnError(new Action1<Throwable>() {
+                .subscribe(new Subscriber<Void>() {
                     @Override
-                    public void call(Throwable t) {
-                        Logger.writeError(t);
+                    public void onCompleted() {
+                        unsubscribe();
                     }
-                })
-                .subscribe();
+
+                    @Override
+                    public void onError(Throwable e) {
+                        Logger.writeError(e);
+                        unsubscribe();
+                    }
+
+                    @Override
+                    public void onNext(Void aVoid) {
+                        interactor.writeCargosToDb(cargoModels)
+                                .subscribeOn(Schedulers.computation())
+                                .observeOn(AndroidSchedulers.mainThread())
+                                .subscribe(new Subscriber<Void>() {
+                                    @Override
+                                    public void onCompleted() {
+                                        unsubscribe();
+                                    }
+
+                                    @Override
+                                    public void onError(Throwable e) {
+                                        Logger.writeError(e);
+                                        unsubscribe();
+                                    }
+
+                                    @Override
+                                    public void onNext(Void aVoid) {
+
+                                    }
+                                });
+                    }
+                });
     }
 
     private void loadCargosFromDb() {
@@ -205,12 +234,13 @@ public class CargosPresenter extends BasePresenter<CargosContract.IView> impleme
                 .subscribe(new Subscriber<List<CargoViewModel>>() {
                     @Override
                     public void onCompleted() {
-
+                        unsubscribe();
                     }
 
                     @Override
                     public void onError(Throwable e) {
                         Logger.writeError(e);
+                        unsubscribe();
                     }
 
                     @Override
@@ -219,10 +249,4 @@ public class CargosPresenter extends BasePresenter<CargosContract.IView> impleme
                     }
                 });
     }
-
-//    private void loadCurrencyTypesFromDb() {
-//
-//    }
-
-
 }

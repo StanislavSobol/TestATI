@@ -1,6 +1,5 @@
 package com.sobolgmail.i.stanislav.testati.cargos;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.DividerItemDecoration;
@@ -13,7 +12,6 @@ import android.view.ViewGroup;
 import com.sobolgmail.i.stanislav.testati.R;
 import com.sobolgmail.i.stanislav.testati.entity.viewmodel.CargoViewModel;
 import com.sobolgmail.i.stanislav.testati.mpv.BaseFragment;
-import com.sobolgmail.i.stanislav.testati.utils.AndroidDatabaseManagerActivity;
 
 import java.util.List;
 
@@ -44,7 +42,7 @@ public class CargosFragment extends BaseFragment<CargosContract.IPresenter> impl
     @Override
     protected void initViews() {
         // only for debug purpose - shows the DB structure
-        startActivity(new Intent(CargosFragment.this.getActivity(), AndroidDatabaseManagerActivity.class));
+        // startActivity(new Intent(CargosFragment.this.getActivity(), AndroidDatabaseManagerActivity.class));
         final LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.addItemDecoration(new DividerItemDecoration(recyclerView.getContext(), layoutManager.getOrientation()));
