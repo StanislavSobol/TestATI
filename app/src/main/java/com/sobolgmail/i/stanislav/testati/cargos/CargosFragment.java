@@ -2,6 +2,7 @@ package com.sobolgmail.i.stanislav.testati.cargos;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -40,6 +41,9 @@ public class CargosFragment extends BaseFragment<CargosContract.IPresenter> impl
     @BindView(R.id.fragment_cargos_recycler_view)
     RecyclerView recyclerView;
 
+    @BindView(R.id.fragment_cargos_refresh_layout)
+    SwipeRefreshLayout swipeRefreshLayout;
+
     @Override
     protected CargosContract.IPresenter createPresenter() {
         return new CargosPresenter();
@@ -62,6 +66,13 @@ public class CargosFragment extends BaseFragment<CargosContract.IPresenter> impl
                 DetailsActivity.startActivity(getActivity(), id);
             }
         });
+
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                getPresenter().swipeRefreshLayoutRefreshed();
+            }
+        });
     }
 
     @Nullable
@@ -74,6 +85,7 @@ public class CargosFragment extends BaseFragment<CargosContract.IPresenter> impl
     public void setCargoViewModels(List<CargoViewModel> cargoViewModels) {
         adapter.setItems(cargoViewModels);
         setProgressBarVisible(false);
+        swipeRefreshLayout.setRefreshing(false);
     }
 
     private void setProgressBarVisible(final boolean visible) {

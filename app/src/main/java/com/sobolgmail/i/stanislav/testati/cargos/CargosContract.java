@@ -13,6 +13,7 @@ import java.util.List;
 
 public interface CargosContract {
     interface IPresenter extends IBasePresenter {
+        void swipeRefreshLayoutRefreshed();
     }
 
     interface IView extends IBaseView {

@@ -42,10 +42,15 @@ public class CargosPresenter extends BasePresenter<CargosContract.IView> impleme
 
     @Override
     protected void onBindWhenNotChangingConfiguration() {
-        loadCurrencyTypesFromNetwork();
+        startLoadingFromNetwork();
     }
 
-    private void loadCurrencyTypesFromNetwork() {
+    @Override
+    public void swipeRefreshLayoutRefreshed() {
+        startLoadingFromNetwork();
+    }
+
+    private void startLoadingFromNetwork() {
         if (!MApplication.isOnlineWithToast(true)) {
             loadCargosFromDb();
             return;
@@ -202,4 +207,5 @@ public class CargosPresenter extends BasePresenter<CargosContract.IView> impleme
                     }
                 });
     }
+
 }
