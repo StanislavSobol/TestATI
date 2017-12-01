@@ -13,7 +13,6 @@ import java.util.List;
 import javax.inject.Inject;
 
 import rx.Observable;
-import rx.Subscriber;
 import rx.functions.Func1;
 
 /**
@@ -55,5 +54,15 @@ public class Interactor implements IInteractor {
     @Override
     public Observable<Void> writeCurrencyTypesToDb(final List<CurrencyTypeModel> models) {
         return sqlOrmManager.writeCurrencyTypes(models);
+    }
+
+    @Override
+    public Observable<Void> writeCargosToDb(List<CargoModel> models) {
+        return sqlOrmManager.writeCargosToDb(models);
+    }
+
+    @Override
+    public Observable<List<CargoModel>> loadCargosFromDb() {
+        return sqlOrmManager.loadCargosFromDb();
     }
 }

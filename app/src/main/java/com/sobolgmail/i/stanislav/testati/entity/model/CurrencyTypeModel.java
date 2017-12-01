@@ -5,6 +5,7 @@ import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 import com.sobolgmail.i.stanislav.testati.entity.response.CurrencyTypeResponse;
 
+import lombok.Getter;
 import lombok.Setter;
 
 /**
@@ -13,6 +14,7 @@ import lombok.Setter;
  */
 
 @Setter
+@Getter
 @DatabaseTable(tableName = CurrencyTypeModel.TABLE)
 public class CurrencyTypeModel {
 

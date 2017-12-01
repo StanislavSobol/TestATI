@@ -15,10 +15,13 @@
         <activity android:name=".cargos.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".utils.AndroidDatabaseManagerActivity"
+            android:theme="@style/Theme.AppCompat.Light" />
+
     </application>
 
 </manifest>

@@ -2,6 +2,10 @@ package com.sobolgmail.i.stanislav.testati.entity.viewmodel;
 
 import com.sobolgmail.i.stanislav.testati.entity.model.CargoModel;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import lombok.Getter;
 import lombok.Setter;
 
 /**
@@ -10,14 +14,22 @@ import lombok.Setter;
  */
 
 @Setter
+@Getter
 public class CargoViewModel {
     private String id;
     private String cargoType;
     private String loadingCity;
     private String unloadingCity;
-    private String currencyTypeName;
 
-    public static CargoViewModel fromModel(CargoModel item) {
+    public static List<CargoViewModel> fromModelsList(final List<CargoModel> cargoModels) {
+        final List<CargoViewModel> result = new ArrayList<>();
+        for (final CargoModel item : cargoModels) {
+            result.add(CargoViewModel.fromModel(item));
+        }
+        return result;
+    }
+
+    private static CargoViewModel fromModel(final CargoModel item) {
         final CargoViewModel result = new CargoViewModel();
         result.setId(item.getId());
         result.setCargoType(item.getCargoType());

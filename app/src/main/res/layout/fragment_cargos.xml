@@ -11,15 +11,14 @@
     <include layout="@layout/full_progress_bar_content" />
 
     <android.support.v4.widget.SwipeRefreshLayout
-        android:id="@+id/main_activity_swipe_refresh_layout"
+        android:id="@+id/fragment_cargos_refresh_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <android.support.v7.widget.RecyclerView
-            android:id="@+id/fragment_dialogs_recycler_view"
+            android:id="@+id/fragment_cargos_recycler_view"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/colorAccent" />
+            android:layout_height="match_parent" />
 
     </android.support.v4.widget.SwipeRefreshLayout>
 

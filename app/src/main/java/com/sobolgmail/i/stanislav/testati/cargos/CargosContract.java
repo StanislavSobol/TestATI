@@ -1,7 +1,10 @@
 package com.sobolgmail.i.stanislav.testati.cargos;
 
+import com.sobolgmail.i.stanislav.testati.entity.viewmodel.CargoViewModel;
 import com.sobolgmail.i.stanislav.testati.mpv.IBasePresenter;
 import com.sobolgmail.i.stanislav.testati.mpv.IBaseView;
+
+import java.util.List;
 
 /**
  * Created by Stanislav Sobol on 29.11.2017.
@@ -13,5 +16,6 @@ public interface CargosContract {
     }
 
     interface IView extends IBaseView {
+        void setCargoViewModels(List<CargoViewModel> cargoViewModels);
     }
 }

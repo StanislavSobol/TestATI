@@ -9,7 +9,6 @@ import com.sobolgmail.i.stanislav.testati.interactor.IInteractor;
 import com.sobolgmail.i.stanislav.testati.mpv.BasePresenter;
 import com.sobolgmail.i.stanislav.testati.utils.Logger;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
@@ -47,6 +46,7 @@ public class CargosPresenter extends BasePresenter<CargosContract.IView> impleme
     }
 
     private void loadCurrencyTypesFromNetwork() {
+
         compositeSubscription.add(
                 interactor.getCurrencyTypesObservable()
                         .timeout(IDataProvider.NETWORK_TIMEOUT_MS, TimeUnit.MILLISECONDS)
@@ -60,36 +60,79 @@ public class CargosPresenter extends BasePresenter<CargosContract.IView> impleme
                                 if (t instanceof TimeoutException) {
                                     Logger.write("TimeoutException");
                                 }
+                                loadCargosFromDb();
                             }
                         })
                         .doOnNext(new Action1<List<CurrencyTypeModel>>() {
                             @Override
-                            public void call(List<CurrencyTypeModel> currencyTypeEntities) {
-                                interactor.writeCurrencyTypesToDb(currencyTypeEntities)
-                                        .subscribeOn(Schedulers.computation())
-                                        .observeOn(AndroidSchedulers.mainThread())
-                                        .subscribe(new Subscriber<Void>() {
-                                            @Override
-                                            public void onCompleted() {
-                                            }
-
-                                            @Override
-                                            public void onError(Throwable e) {
-                                                Logger.writeError(e);
-                                            }
-
-                                            @Override
-                                            public void onNext(Void aVoid) {
-                                                loadCargosFromNetwork();
-                                            }
-                                        });
+                            public void call(final List<CurrencyTypeModel> currencyTypeModels) {
+                                loadCargosFromNetwork(currencyTypeModels);
+//                                interactor.writeCurrencyTypesToDb(currencyTypeModels)
+//                                        .subscribeOn(Schedulers.computation())
+//                                        .observeOn(AndroidSchedulers.mainThread())
+//                                        .subscribe(new Subscriber<Void>() {
+//                                            @Override
+//                                            public void onCompleted() {
+//                                            }
+//
+//                                            @Override
+//                                            public void onError(Throwable e) {
+//                                                Logger.writeError(e);
+//                                            }
+//
+//                                            @Override
+//                                            public void onNext(Void aVoid) {
+//                                       //         loadCargosFromNetwork(currencyTypeModels);
+//                                            }
+//                                        });
                             }
                         })
                         .subscribe()
         );
+
+//        compositeSubscription.add(
+//                interactor.getCurrencyTypesObservable()
+//                        .timeout(IDataProvider.NETWORK_TIMEOUT_MS, TimeUnit.MILLISECONDS)
+//                        .onBackpressureBuffer()
+//                        .subscribeOn(Schedulers.computation())
+//                        .observeOn(AndroidSchedulers.mainThread())
+//                        .doOnError(new Action1<Throwable>() {
+//                            @Override
+//                            public void call(Throwable t) {
+//                                Logger.writeError(t);
+//                                if (t instanceof TimeoutException) {
+//                                    Logger.write("TimeoutException");
+//                                }
+//                            }
+//                        })
+//                        .doOnNext(new Action1<List<CurrencyTypeModel>>() {
+//                            @Override
+//                            public void call(List<CurrencyTypeModel> currencyTypeEntities) {
+//                                interactor.writeCurrencyTypesToDb(currencyTypeEntities)
+//                                        .subscribeOn(Schedulers.computation())
+//                                        .observeOn(AndroidSchedulers.mainThread())
+//                                        .subscribe(new Subscriber<Void>() {
+//                                            @Override
+//                                            public void onCompleted() {
+//                                            }
+//
+//                                            @Override
+//                                            public void onError(Throwable e) {
+//                                                Logger.writeError(e);
+//                                            }
+//
+//                                            @Override
+//                                            public void onNext(Void aVoid) {
+//                                                loadCargosFromNetwork();
+//                                            }
+//                                        });
+//                            }
+//                        })
+//                        .subscribe()
+//        );
     }
 
-    private void loadCargosFromNetwork() {
+    private void loadCargosFromNetwork(final List<CurrencyTypeModel> currencyTypeModels) {
         compositeSubscription.add(interactor.getCargosObservable()
                 .timeout(IDataProvider.NETWORK_TIMEOUT_MS, TimeUnit.MILLISECONDS)
                 .onBackpressureBuffer()
@@ -108,37 +151,78 @@ public class CargosPresenter extends BasePresenter<CargosContract.IView> impleme
                 .doOnNext(new Action1<List<CargoModel>>() {
                     @Override
                     public void call(List<CargoModel> cargoModels) {
-
+                        for (final CargoModel cargo : cargoModels) {
+                            for (final CurrencyTypeModel type : currencyTypeModels) {
+                                if (type.getId() == cargo.getCurrencyTypeModel().getId()) {
+                                    cargo.setCurrencyTypeModel(type);
+                                    break;
+                                }
+                            }
+                        }
+                        writeCargosToDb(cargoModels);
                     }
                 })
                 .map(new Func1<List<CargoModel>, List<CargoViewModel>>() {
                     @Override
                     public List<CargoViewModel> call(List<CargoModel> cargoModels) {
-                        final List<CargoViewModel> result = new ArrayList<>();
-                        for (final CargoModel item : cargoModels) {
-                            result.add(CargoViewModel.fromModel(item));
-                        }
-
-                        return result;
+                        return CargoViewModel.fromModelsList(cargoModels);
                     }
                 })
                 .doOnNext(new Action1<List<CargoViewModel>>() {
                     @Override
-                    public void call(List<CargoViewModel> cargoBiewModels) {
-                        Logger.write("");
+                    public void call(List<CargoViewModel> cargoViewModels) {
+                        getView().setCargoViewModels(cargoViewModels);
                     }
                 })
                 .subscribe()
         );
     }
 
+    private void writeCargosToDb(List<CargoModel> cargoModels) {
+        interactor.writeCargosToDb(cargoModels)
+                .subscribeOn(Schedulers.computation())
+                .observeOn(AndroidSchedulers.mainThread())
+                .doOnError(new Action1<Throwable>() {
+                    @Override
+                    public void call(Throwable t) {
+                        Logger.writeError(t);
+                    }
+                })
+                .subscribe();
+    }
+
     private void loadCargosFromDb() {
+        interactor.loadCargosFromDb()
+                .onBackpressureBuffer()
+                .subscribeOn(Schedulers.computation())
+                .observeOn(AndroidSchedulers.mainThread())
+                .map(new Func1<List<CargoModel>, List<CargoViewModel>>() {
+                    @Override
+                    public List<CargoViewModel> call(List<CargoModel> cargoModels) {
+                        return CargoViewModel.fromModelsList(cargoModels);
+                    }
+                })
+                .subscribe(new Subscriber<List<CargoViewModel>>() {
+                    @Override
+                    public void onCompleted() {
 
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        Logger.writeError(e);
+                    }
+
+                    @Override
+                    public void onNext(List<CargoViewModel> cargoViewModels) {
+                        getView().setCargoViewModels(cargoViewModels);
+                    }
+                });
     }
 
-    private void loadCurrencyTypesFromDb() {
-
-    }
+//    private void loadCurrencyTypesFromDb() {
+//
+//    }
 
 
 }

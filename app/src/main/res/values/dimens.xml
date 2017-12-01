@@ -1,0 +1,7 @@
+<resources>
+    <dimen name="ripple_margin">2dp</dimen>
+    <dimen name="cargo_item_height">50dp</dimen>
+    <dimen name="big_text_size">16sp</dimen>
+    <dimen name="small_text_size">12sp</dimen>
+    <dimen name="cargo_padding">4dp</dimen>
+</resources>

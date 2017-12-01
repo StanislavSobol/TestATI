@@ -41,10 +41,8 @@ public class CargoModel {
     @DatabaseField(columnName = FIELD_NOTE, dataType = DataType.STRING)
     private String note;
 
-    @DatabaseField(columnName = FIELD_CURRENCY_ID, dataType = DataType.INTEGER)
-    private int currencyId;
-
-    private CurrencyTypeModel currencyTypeModel;
+    @DatabaseField(foreign = true, foreignAutoRefresh = true)
+    private CurrencyTypeModel currencyTypeModel = new CurrencyTypeModel();
 
     public static CargoModel fromResponseItem(CargoPageResponse.Load responseLoaditem) {
         final CargoModel result = new CargoModel();
@@ -53,7 +51,8 @@ public class CargoModel {
         result.setLoadingCity(responseLoaditem.getLoading().getLocation().getCity());
         result.setUnloadingCity(responseLoaditem.getUnloading().getLocation().getCity());
         result.setNote(responseLoaditem.getNote());
-        result.setCurrencyId(responseLoaditem.getRate().getCurrencyId());
+        // result.setCurrencyId(responseLoaditem.getRate().getCurrencyId());
+        result.getCurrencyTypeModel().setId(responseLoaditem.getRate().getCurrencyId());
         return result;
     }
 }

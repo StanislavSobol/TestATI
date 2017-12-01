@@ -2,12 +2,10 @@ package com.sobolgmail.i.stanislav.testati.interactor;
 
 import com.sobolgmail.i.stanislav.testati.entity.model.CargoModel;
 import com.sobolgmail.i.stanislav.testati.entity.model.CurrencyTypeModel;
-import com.sobolgmail.i.stanislav.testati.entity.response.CargoPageResponse;
 
 import java.util.List;
 
 import rx.Observable;
-import rx.Subscriber;
 
 /**
  * Created by Stanislav Sobol on 29.11.2017.
@@ -20,5 +18,10 @@ public interface IInteractor {
 
     Observable<List<CargoModel>> getCargosObservable();
 
+    @Deprecated
     Observable<Void> writeCurrencyTypesToDb(List<CurrencyTypeModel> models);
+
+    Observable<Void> writeCargosToDb(List<CargoModel> models);
+
+    Observable<List<CargoModel>> loadCargosFromDb();
 }

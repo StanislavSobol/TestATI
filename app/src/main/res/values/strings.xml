@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">TestATI</string>
+    <integer name="ripple_duration">300</integer>
 </resources>
