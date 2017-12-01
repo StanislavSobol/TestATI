@@ -10,7 +10,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
+import com.sobolgmail.i.stanislav.testati.MApplication;
 import com.sobolgmail.i.stanislav.testati.R;
 import com.sobolgmail.i.stanislav.testati.details.DetailsActivity;
 import com.sobolgmail.i.stanislav.testati.entity.viewmodel.CargoViewModel;
@@ -86,6 +88,25 @@ public class CargosFragment extends BaseFragment<CargosContract.IPresenter> impl
         adapter.setItems(cargoViewModels);
         setProgressBarVisible(false);
         swipeRefreshLayout.setRefreshing(false);
+    }
+
+    @Override
+    public void showToastWithError(Throwable t) {
+        String s = getResources().getString(R.string.error_http_beg);
+        s += "\n";
+        s += t.toString();
+        s += "\n";
+        s += getResources().getString(R.string.error_http_end);
+
+        for (int i = 0; i < 3; i++) {
+            Toast.makeText(MApplication.getAppContext(), s, Toast.LENGTH_LONG).show();
+        }
+    }
+
+    @Override
+    public void showInfoAboutEmptyData() {
+        final String s = getResources().getString(R.string.empty_db);
+        Toast.makeText(MApplication.getAppContext(), s, Toast.LENGTH_SHORT).show();
     }
 
     private void setProgressBarVisible(final boolean visible) {

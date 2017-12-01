@@ -69,6 +69,7 @@ public class CargosPresenter extends BasePresenter<CargosContract.IView> impleme
                                 if (t instanceof TimeoutException) {
                                     Logger.write("TimeoutException");
                                 }
+                                getView().showToastWithError(t);
                                 loadCargosFromDb();
                             }
                         })
@@ -125,6 +126,7 @@ public class CargosPresenter extends BasePresenter<CargosContract.IView> impleme
                         if (e instanceof TimeoutException) {
                             Logger.write("TimeoutException");
                         }
+                        getView().showToastWithError(e);
                         loadCargosFromDb();
                     }
 
@@ -204,6 +206,9 @@ public class CargosPresenter extends BasePresenter<CargosContract.IView> impleme
                     @Override
                     public void onNext(List<CargoViewModel> cargoViewModels) {
                         getView().setCargoViewModels(cargoViewModels);
+                        if (cargoViewModels.isEmpty()) {
+                            getView().showInfoAboutEmptyData();
+                        }
                     }
                 });
     }

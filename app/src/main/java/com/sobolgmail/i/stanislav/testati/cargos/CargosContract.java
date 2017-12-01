@@ -13,10 +13,16 @@ import java.util.List;
 
 public interface CargosContract {
     interface IPresenter extends IBasePresenter {
+
         void swipeRefreshLayoutRefreshed();
     }
 
     interface IView extends IBaseView {
+
         void setCargoViewModels(List<CargoViewModel> cargoViewModels);
+
+        void showToastWithError(Throwable t);
+
+        void showInfoAboutEmptyData();
     }
 }

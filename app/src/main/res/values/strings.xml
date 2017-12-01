@@ -10,4 +10,8 @@
     <string name="details_note_label">Комментарий:</string>
     <string name="details_currency_label">Название из словаря:</string>
 
+    <string name="empty_db">База данных пуста</string>
+    <string name="error_http_beg">Произошла HTTP-ощибка:</string>
+    <string name="error_http_end">Если там 401 ошибка, то знайте: запрос пост раньше работал нормально, и я успел сохранить JSON репонса :). Чтобы его сымитировать, переключите BuildVariant на mockedNetwork.\nА пока попробую загрузить из Базы Данных</string>
+
 </resources>
